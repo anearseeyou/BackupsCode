@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: 0;
+}
+
+.clearfix:before, .clearfix:after{
+    /*设置添加的子元素的内容为空*/
+    content: "";
+    /*设置添加的子元素为块级元素*/
+    display: table;
+    /*设置添加的子元素的高度为0*/
+    height: 0;
+    /*设置添加的子元素看不见*/
+    visibility: hidden;
+    /*给添加的子元素设置clear: both;*/
+    clear: both;
+}
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+.resume {
+    width: 1200px;
+    height: 2000px;
+    background-color:#f1eee8;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.resume .resume-left {
+    float: left;
+    width: 450px;
+    height: 100%;
+    background-color: #199475;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.resume .resume-left .portrait {
+    width: 150px;
+    height: 150px;
+    background: url("../images/portrait.JPG") no-repeat center center;
+    background-size: 150px 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.resume .resume-left .title {
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 3px solid #0c6541;
+    padding-bottom: 10px;
+
+}
+
+.resume .resume-left .content {
+    width: 300px;
+    height: 50px;
+    margin: 0 auto;
+    color: #aee2d9;
+    text-align: center;
+    line-height: 26px;
+    margin-top: 10px;
+}
+
+.resume .resume-left .content .engineer h2 {
+    width: 300px;
+    height: 32px;
+    border-bottom: 1px solid rgba(174, 226, 217, 0.5);
+    margin-top: 10px;
+    font-size: 22px;
+    color: #0c4424;
+}
+
+.resume .resume-left .technology {
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 90px;
+    text-align: left;
+    color: #fff;
+}
+
+.resume .resume-left .technology ul li {
+    height: 30px;
+    line-height: 30px;
+}
+
+.resume .resume-left .technology ul li span {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    font-weight: 700;
+}
+
+.resume .resume-left .technology i,
+.resume .resume-left .technology i em {
+    display: inline-block;
+    font-style: normal;
+    width: 174px;
+    height: 15px;
+    line-height: 15px;
+    border-radius: 10px;
+}
+
+.resume .resume-left .technology ul li i {
+    background: rgba(174, 226, 217, 0.3);
+}
+
+.resume .resume-left .technology ul li i em {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.resume .resume-left .technology ul li:nth-child(1) em {
+    width: 155px;
+}
+
+.resume .resume-left .technology ul li:nth-child(2) em {
+    width: 145px;
+}
+
+.resume .resume-left .technology ul li:nth-child(3) em {
+    width: 135px;
+}
+
+.resume .resume-left .technology ul li:nth-child(4) em {
+    width: 125px;
+}
+
+.resume .resume-left .technology ul li:nth-child(5) em {
+    width: 125px;
+}
+
+.resume .resume-left .technology ul li:nth-child(6) em {
+    width: 125px;
+}
+
+.resume .resume-left .technology ul li:nth-child(7) em {
+    width: 118px;
+}
+
+.resume .resume-left .technology ul li:nth-child(8) em {
+    width: 117px;
+}
+
+.resume .resume-left .technology ul li:nth-child(9) em {
+    width: 116px;
+}
+
+.resume .resume-left .technology ul li:nth-child(10) em {
+    width: 115px;
+}
+
+.resume .resume-left .technology ul li:nth-child(11) em {
+    width: 114px;
+}
+
+.resume .resume-left .technology ul li:nth-child(12) em {
+    width: 100px;
+}
+
+.resume .resume-left .technology ul li:nth-child(13) em {
+    width: 100px;
+}
+
+.resume .resume-left .technology ul li:nth-child(14) em {
+    width: 70px;
+}
+
+.resume .resume-left .technology ul li:nth-child(15) em {
+    width: 50px;
+}
+
+.resume .resume-left .technology .line {
+    color: #aee2d9;
+}
+
+.resume .resume-left .des {
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 20px;
+    text-align: left;
+    color: #e0e0e0;
+}
+
+.resume .resume-left .des p {
+    margin-top:10px;
+    font-size: 18px;
+}
+
+.resume .resume-left .des p span {
+    /*color: #fff;*/
+}
+
+.resume .resume-left .about {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.resume .resume-left .about a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.resume .resume-left .about li {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.resume .resume-left .about i {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.resume .resume-left .about i img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+/*****************************************************************************/
+
+.resume-right {
+    float: left;
+    width: 750px;
+    height: 100%;
+    box-sizing: border-box;
+}
+.resume-right .container{
+    width: 650px;
+    height:auto;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+.resume-right .project{
+    width: 650px;
+    box-sizing: border-box;
+    padding-top:60px;
+}
+
+.resume-right .project strong {
+    float: left;
+    font-size:35px;
+    color: #6b6b6b;
+    font-weight:bolder;
+    text-shadow: 1px 1px #6b6b6b;
+}
+
+.resume-right .project a {
+    float: right;
+    color: #199475;
+    padding-top:15px;
+}
+
+.resume-right .pro{
+    width: 650px;
+    text-align: left;
+    margin-top:20px;
+    position: relative;
+    /*background-color: #e0e0e0;*/
+}
+
+.resume-right .pro1{
+    float: left;
+    width: 100%;
+    margin-bottom:10px;
+}
+.resume-right .pro1 .left-content{
+    float: left;
+    width: 20%;
+    margin-bottom:10px;
+}
+.resume-right .pro1 .left-content a{
+    font-weight:700;
+    color: #199475;
+}
+
+.resume-right .pro1 .right-content{
+    float: right;
+    width: 80%;
+}
+
+.left-content1 a{
+    font-weight:700;
+    color: #199475;
+}
+
+.resume-right .pro span{
+    float: left;
+    width: 100px;
+    height: 34px;
+    font-size:26px;
+    color: #199475;
+    font-weight:700;
+    margin-bottom:15px;
+}
+.resume-right .pro em{
+    font-style: normal;
+    float: right;
+    font-size:14px;
+    padding:1px 8px;
+    background: rgba(25,148,117,1);
+    text-align: center;
+    color: #fff;
+    margin-right:10px;
+}
+
+.resume-right .pro p{
+    float: left;
+    font-size:16px;
+    color: #888;
+    margin-bottom:10px;
+
+}
+
+.resume-right .pro p a{
+    text-decoration: none;
+    color: #199475;
+}
+
+.jiacu{
+    font-weight:700;
+}
+
+
+
+.resume-right .container .edu{
+    margin-top:100px;
+
+    font-weight:bolder;
+    line-height:36px;
+    color: #199475;
+}
+.resume-right .container .edu strong{
+    color: #6b6b6b;
+    font-size:32px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.resume-right .container .edu h2{
+    font-size:16px;
+    color: #199475;
+
+}
+.resume-right .container .edu h1{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:700;
+    text-shadow: 1px 1px 1px  #fff;
+}
+
+.resume-right .container .edu h3{
+    /*color: #2a8b7e;*/
+    color: #71988f;
+
+    font-size:16px;
+
+}

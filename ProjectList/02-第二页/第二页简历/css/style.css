@@ -1,0 +1,689 @@
+ul {
+    list-style: none;
+}
+
+.st-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    font-family: 'Josefin Slab', 'Myriad Pro', Arial, sans-serif;
+}
+
+.st-container > input,
+.st-container > a {
+    position: fixed;
+    bottom: 0px;
+    width: 20%;
+    cursor: pointer;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.st-container > input {
+    opacity: 0;
+    z-index: 1000;
+}
+
+.st-container > a {
+    z-index: 10;
+    font-weight: 700;
+    /*background: #e23a6e;*/
+    /*background: rgba(224,128,49,.8);*/
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
+}
+
+/* "Fix" for percentage rounding: add a background bar pseudo element with the same color like the labels */
+.st-container:before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    height: 34px;
+    /*background: #e23a6e;*/
+    /*background: rgba(224,128,49,1);*/
+    z-index: 9;
+    bottom: 0;
+}
+
+#st-control-1, #st-control-1 + a {
+    left: 0;
+}
+
+#st-control-2, #st-control-2 + a {
+    left: 20%;
+}
+
+#st-control-3, #st-control-3 + a {
+    left: 40%;
+}
+
+#st-control-4, #st-control-4 + a {
+    left: 60%;
+}
+
+#st-control-5, #st-control-5 + a {
+    left: 80%;
+}
+
+.st-container > input:checked + a,
+.st-container > input:checked:hover + a {
+    /*background: #821134;*/
+    background: rgba(4, 77, 34, 1);
+}
+
+.st-container > input:checked + a:after,
+.st-container > input:checked:hover + a:after {
+    bottom: 100%;
+    border: solid transparent;
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    /*border-bottom-color: #821134;*/
+    border-bottom-color: rgba(199, 206, 178, 1);
+    border-width: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.st-container > input:hover + a {
+    /*background: #AD244F;*/
+    background: rgba(0, 0, 0, .2);
+}
+
+.st-container > input:hover + a:after {
+    border-bottom-color: #AD244F;
+}
+
+.st-scroll,
+.st-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.st-scroll {
+    top: 0;
+    left: 0;
+    -webkit-transition: all 0.6s ease-in-out;
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+
+    /* Let's enforce some hardware acceleration */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel {
+    /*background: #fff;*/
+    overflow: hidden;
+    background: rgba(25, 148, 117, 1);
+}
+
+#st-control-1:checked ~ .st-scroll {
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+#st-control-2:checked ~ .st-scroll {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+#st-control-3:checked ~ .st-scroll {
+    -webkit-transform: translateY(-200%);
+    -moz-transform: translateY(-200%);
+    -o-transform: translateY(-200%);
+    -ms-transform: translateY(-200%);
+    transform: translateY(-200%);
+}
+
+#st-control-4:checked ~ .st-scroll {
+    -webkit-transform: translateY(-300%);
+    -moz-transform: translateY(-300%);
+    -o-transform: translateY(-300%);
+    -ms-transform: translateY(-300%);
+    transform: translateY(-300%);
+}
+
+#st-control-5:checked ~ .st-scroll {
+    -webkit-transform: translateY(-400%);
+    -moz-transform: translateY(-400%);
+    -o-transform: translateY(-400%);
+    -ms-transform: translateY(-400%);
+    transform: translateY(-400%);
+}
+
+/* Content elements */
+
+.st-deco {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -100px;
+    background: #fa96b5;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+[data-icon]:after {
+    content: attr(data-icon);
+    font-family: 'RaphaelIcons';
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 90px;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    -webkit-transform: rotate(-45deg) translateY(25%);
+    -moz-transform: rotate(-45deg) translateY(25%);
+    -o-transform: rotate(-45deg) translateY(25%);
+    -ms-transform: rotate(-45deg) translateY(25%);
+    transform: rotate(-45deg) translateY(25%);
+}
+
+.st-panel h2 {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
+    position: absolute;
+    font-size: 54px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 40%;
+    -webkit-backface-visibility: hidden;
+}
+
+#st-control-1:checked ~ .st-scroll #st-panel-1 h2,
+#st-control-2:checked ~ .st-scroll #st-panel-2 h2,
+#st-control-3:checked ~ .st-scroll #st-panel-3 h2,
+#st-control-4:checked ~ .st-scroll #st-panel-4 h2,
+#st-control-5:checked ~ .st-scroll #st-panel-5 h2 {
+    -webkit-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -moz-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -o-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    -ms-animation: moveDown 0.6s ease-in-out 0.2s backwards;
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+
+@-webkit-keyframes moveDown {
+    0% {
+        -webkit-transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes moveDown {
+    0% {
+        -moz-transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes moveDown {
+    0% {
+        -o-transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        -o-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes moveDown {
+    0% {
+        -ms-transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        -ms-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.st-panel p,
+.st-panel .tab-job,
+.st-panel .technology,
+.st-panel .more {
+    position: absolute;
+    text-align: center;
+    font-size: 20px;
+    line-height: 22px;
+    color: #aee2d9;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 45%;
+    margin: 10px 0 0 0;
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel .content {
+    font-size: 1.5em;
+    margin-top: 60px;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0.95;
+}
+
+.st-panel .charm {
+    margin-top: 105px;
+    font-size: 1.25em;
+}
+
+/* 肖像 */
+.st-panel .title{
+    left:14%;
+}
+.st-panel .portrait {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 38.5%;
+    top: 25%;
+    border-radius: 50%;
+}
+.st-panel .portrait img{
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* 教育 */
+.st-panel .education span {
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+
+.st-panel .education span:first-child {
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+    opacity: 0.95;
+}
+
+.st-panel .education .grad {
+    font-size: 18px;
+    color: #aee2d9;
+}
+
+.st-panel .education .info {
+    color: #aee2d9;
+}
+
+/* 经历 */
+.st-panel .job {
+    top: 36%;
+}
+
+.st-panel .tab-job {
+    top: 43%;
+    border: 1px solid rgba(174, 226, 217, 0.3);
+}
+
+.st-panel .tab-job ul {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+.st-panel .tab-job .job-head ul {
+    display: flex;
+
+}
+
+.st-panel .job-head {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+
+.st-panel .job-head ul li {
+    flex: 1;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    font-size: 28px;
+    color: #fff;
+    background-color: rgb(28, 137, 102);
+    padding: 0 1px;
+    border-bottom: 1px solid rgba(174, 226, 217, 0.3);
+}
+
+.st-panel .job-head ul li.current {
+    background-color: #199475;
+    border-bottom: 0;
+    border-right: 1px solid rgba(174, 226, 217, 0.5);
+    padding: 0;
+    font-weight: 700;
+}
+
+.st-panel .job-head ul li:last-child {
+    border-right: none;
+}
+
+.st-panel .job-head ul li:hover strong {
+    color: #9f3;
+    font-weight: bolder;
+}
+
+.st-panel .job-head ul li strong {
+    width: 100px;
+    height: 60px;
+    font-weight: normal;
+}
+
+.st-panel .job-content {
+    margin-top: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.st-panel .job-content .content-list {
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 20px;
+    margin-top: 40px;
+    padding-bottom: 0;
+    line-height: 50px;
+    color: #aee2d9;
+    font-size: 22px;
+}
+
+.st-panel .job-content .content-list .pro {
+    color: #aee2d9;
+}
+
+.st-panel .job-content .content-list .pro:hover {
+    color: #9f3;
+}
+
+.st-panel .job-content .content-list.show {
+    display: block;
+}
+
+/* 技能 */
+.st-panel .technology {
+    top: 38%;
+}
+
+.st-panel .major {
+    top: 37%;
+}
+
+.st-panel .technology ul li {
+    /*background-color: #000;*/
+    margin-bottom: 10px;
+}
+
+.st-panel .technology ul li span {
+    display: inline-block;
+    padding: 1px 8px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    margin-right: 10px;
+    background-color: #094e40;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.st-panel .technology ul li span.so-good {
+    color: #aee2d9;
+    opacity: 0.9;
+}
+
+.st-panel .technology ul li span.soso {
+    color: #aee2d9;
+    opacity: 0.65;
+}
+
+/* 了解更多 */
+.st-panel .more {
+    font-size: 1.25em;
+    color: #fff;
+}
+
+.st-panel .more a {
+    color: #006f5c;
+    transition: 0.5s;
+}
+
+.st-panel .more a:hover {
+    color: #9f3;
+}
+
+.st-panel .more .email {
+    font-size: 22px;
+    margin-top: 60px;
+    color: #aee2d9;
+}
+
+.st-panel .more .about ul {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.st-panel .more .about li {
+    width: 40px;
+    height: 40px;
+    margin-top: 100px;
+    margin-right: 10px;
+    background-color: #006f5c;
+    border-radius: 50%;
+    text-align: center;
+    line-height:40px;
+}
+.st-panel .more .about li:hover{
+    border-radius: 3px;
+    transition: 1s;
+}
+.st-panel .more .about li a {
+    flex: 1;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background: url("../images/social.png") no-repeat 0 0;
+}
+.st-panel .more .about li:nth-child(2) a {
+    background-position: -80px 0px;
+}
+.st-panel .more .about li:nth-child(3) a {
+    background-position: -160px -40px;
+}
+.st-panel .more .about li:nth-child(4) a {
+    background-position: -200px -40px;
+}
+.st-panel .more .about li:nth-child(5) a {
+    background-position: -40px -40px;
+}
+.st-panel .more .about li:nth-child(6) a {
+    background-position: -160px 0px;
+}
+
+/* 抽取 */
+#st-control-1:checked ~ .st-scroll #st-panel-1 p,
+#st-control-2:checked ~ .st-scroll #st-panel-2 .technology,
+#st-control-3:checked ~ .st-scroll #st-panel-3 .tab-job,
+#st-control-4:checked ~ .st-scroll #st-panel-4 p,
+#st-control-5:checked ~ .st-scroll #st-panel-5 .more {
+    -webkit-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+    -moz-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+    -o-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+    -ms-animation: moveUp 0.6s ease-in-out 0.2s backwards;
+    animation: moveUp 0.6s ease-in-out 0.2s backwards;
+}
+
+@-webkit-keyframes moveUp {
+    0% {
+        -webkit-transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes moveUp {
+    0% {
+        -moz-transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        -moz-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@-o-keyframes moveUp {
+    0% {
+        -o-transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        -o-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes moveUp {
+    0% {
+        -ms-transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        -ms-transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Colored sections */
+
+.st-color,
+.st-deco {
+    background: rgba(11, 110, 72, 1);
+}
+
+.st-color [data-icon]:after {
+
+    color: rgba(255, 255, 255, 1);
+}
+
+.st-color .st-deco {
+
+    background: rgba(25, 148, 117, 1);
+}
+
+.st-color h2 {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.st-color p {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media screen and (max-width: 520px) {
+    .st-panel h2 {
+        font-size: 42px;
+    }
+
+    .st-panel p {
+        width: 90%;
+        left: 5%;
+        margin-top: 0;
+    }
+
+    .st-container > a {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .st-container > a {
+        font-size: 10px;
+    }
+
+    .st-deco {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+
+    [data-icon]:after {
+        font-size: 60px;
+        -webkit-transform: rotate(-45deg) translateY(15%);
+        -moz-transform: rotate(-45deg) translateY(15%);
+        -o-transform: rotate(-45deg) translateY(15%);
+        -ms-transform: rotate(-45deg) translateY(15%);
+        transform: rotate(-45deg) translateY(15%);
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>中心轮播</title>
+
+    <!--
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+    -->
+
+    <link rel="stylesheet" href="css/edslider.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate-custom.css">
+
+</head>
+<body>
+
+<div class="center-slider">
+
+    <ul class="mySlideshow">
+
+        <li class="first">
+            <a href="#" class="animated fadeInLeft">
+                <img src="images/coder2.jpg" width="200" height="200" alt="Harley-Davidson">
+            </a>
+            <div class="animated fadeInRight">
+                <span>编程之路,道阻且长</span><br>
+                <span>还有吟不了的诗和到不了的远方</span><br>
+                <span>So just keep the fucking code!</span>
+            </div>
+        </li>
+
+        <li class="second">
+            <img src="images/second-title.png" class="animated fadeInRight">
+            <p class="animated fadeInDown">
+                <span>假如生活欺骗你</span><br>
+                <span>不要悲伤 不要心急</span><br>
+                <span class="second-text">
+                        忧郁的日子里需要镇静
+                    </span><br>
+            </p>
+            <img src="images/xiao.jpg" class="animated fadeInRight young-man">
+        </li>
+
+        <li class="third">
+            <img src="images/third-title.png" class="animated fadeInLeft">
+            <p class="animated fadeInRight">
+                <span>相信吧！快乐的日子将会来临!</span><br>
+                <span class="third-text">心永远向往着未来</span><br>
+            </p>
+            <img src="images/xiao3.jpg" class="animated fadeInLeft happy-man">
+        </li>
+
+        <li class="fourth">
+            <img src="images/fourth-title.png" class="animated fadeInLeft">
+            <p class="animated fadeInRight">
+                <span>现在却常是忧郁</span><br>
+                <span>一切都是瞬息</span><br>
+                <span class="fourth-text">一切都会将过去</span><br>
+            </p>
+            <img src="images/xiao4.jpg" class="animated fadeInDown middle-man">
+        </li>
+
+        <li class="fifth">
+            <img src="images/fifth-title.png" class="animated fadeInRight">
+            <p class="animated fadeInLeft">
+                <span>而那过去了的</span><br>
+                <span>就会成为亲切的怀念。</span><br>
+            </p>
+            <img src="images/xiao7.jpg" class="animated fadeInDown old-man">
+        </li>
+    </ul>
+
+</div>
+
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.edslider.js"></script>
+<script>
+
+    $(document).ready(function () {
+        // Call plugin
+        $('.mySlideshow').edslider({
+            width: '80%',
+            height: 350
+        });
+
+        // Hide btn
+        $('.mySlideshow').on('mouseover', function () {
+            $('.navigator').css({opacity: '1'});
+        });
+
+
+    });
+
+</script>
+</body>
+</html>

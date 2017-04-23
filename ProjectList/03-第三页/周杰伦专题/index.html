@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>周杰伦专场</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onselectstart="return false">
+
+<!-- 导航 -->
+<header class="header">
+
+    <!-- 导航 -->
+    <nav class="nav">
+        <ul id="ul">
+            <li>
+                <a class="current" href="javascript:;">
+                    <em class="current-bg">床边故事</em>
+                </a>
+                <span></span>
+                <audio src="source/a1.mp3"></audio>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <em class="current-bg">七里香</em>
+                </a>
+                <span></span>
+                <audio src="source/a2.mp3"></audio>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <em class="current-bg">Jay同名专辑</em>
+                </a>
+                <span></span>
+                <audio src="source/a3.mp3"></audio>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <em class="current-bg">依然范特西</em>
+                </a>
+                <span></span>
+                <audio src="source/a4.mp3"></audio>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <em class="current-bg">十一月的萧邦</em>
+                </a>
+                <span></span>
+                <audio src="source/a5.mp3"></audio>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <em class="current-bg">牛仔很忙</em>
+                </a>
+                <span></span>
+                <audio src="source/a6.mp3"></audio>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <em class="current-bg">十二新作</em>
+                </a>
+                <span></span>
+                <audio src="source/a7.mp3"></audio>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <em class="current-bg">叶惠美</em>
+                </a>
+                <span></span>
+                <audio src="source/a8.mp3"></audio>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <em class="current-bg">不能说的秘密</em>
+                </a>
+                <span></span>
+                <audio src="source/a9.mp3"></audio>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- 登录 -->
+    <div class="login">
+        <a href="javascript:;">登录<img src="images/down.png" alt=""></a>
+    </div>
+
+    <!-- 登录选项 -->
+    <div style="display: none" class="login-list">
+        <ul>
+            <li class="mobile">
+                <a href="javascript:;">
+                    <i class="icon icon-mb"></i>
+                    <em>手机快速登录</em>
+                </a>
+            </li>
+            <li>
+                <a target="_blank"
+                   href="https://open.weixin.qq.com/connect/qrconnect?appid=wxe280063f5fb2528a&response_type=code&redirect_uri=https://music.163.com/back/weichat&forcelogin=true&scope=snsapi_login&state=FVmTncukPl&lang=zh_CN#wechat_redirect">
+                    <i class="icon icon-wx"></i>
+                    <em>微信登录</em>
+                </a>
+            </li>
+            <li>
+                <a target="_blank"
+                   href="https://graph.qq.com/oauth/show?which=Login&display=pc&client_id=100495085&response_type=code&redirect_uri=https://music.163.com/back/qq&forcelogin=true&state=cxVQTYPCdi">
+                    <i class="icon icon-qq"></i>
+                    <em>QQ号登录</em>
+                </a>
+            </li>
+            <li>
+                <a target="_blank"
+                   href="https://api.weibo.com/oauth2/authorize?client_id=301575942&response_type=code&redirect_uri=http://music.163.com/back/weibo&forcelogin=true&scope=friendships_groups_read,statuses_to_me_read,follow_app_official_microblog&state=rzKoDOOWFB">
+                    <i class="icon icon-wb"></i>
+                    <em>新浪微博登录</em>
+                </a>
+            </li>
+            <li class="email">
+                <a href="javascript:;">
+                    <i class="icon icon-wy"></i>
+                    <em>网易邮箱登录</em>
+                </a>
+            </li>
+        </ul>
+        <img class="sjx" src="images/sanjiaoxing.png" alt="">
+    </div>
+
+</header>
+
+<!-- 模态登录 -->
+<div style="display: none" class="interface" id="move">
+    <!-- 中心面板 -->
+    <div class="panel" id="panel">
+        <h1 class="login-title">手机号登录</h1>
+        <i class="close"></i>
+    </div>
+    <!-- 登录框 -->
+    <div class="mode-login" id="login">
+        <div class="user-pwd" id="user-pwd">
+            <input type="text" id="inp" placeholder="请输入手机号">
+        </div>
+        <div class="user-pwd" id="pwd-user">
+            <input type="password" placeholder="请输入密码">
+        </div>
+        <div class="setting">
+            <a href="javascript:;">下次自动登录
+                <input type="checkbox" checked>
+            </a>
+            <a href="javascript:;" class="seting-right">忘记密码 ?</a>
+        </div>
+        <button class="sign">登&nbsp;录</button>
+        <div class="reg">
+            没有账号 ? &nbsp;&nbsp;
+            <a href="javascript:;">立即注册 &gt;</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- banner部分 -->
+<div class="banner">
+    <div class="banner-left">
+
+        <!-- 床边故事 -->
+        <ul class="showUl" style="display: block">
+            <li>
+                <p></p>
+                <p>操作</p>
+                <p>音乐标题</p>
+                <p>歌手</p>
+                <p>时长</p>
+            </li>
+            <li>
+                <span class="num">01</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">告白气球</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:35</span>
+            </li>
+            <li>
+                <span class="num">02</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">说走就走</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:26</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">一点点</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:41</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">前世情人</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:20</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">英雄</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:21</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">不该</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:50</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">土耳其冰淇淋</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:15</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">床边故事</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:46</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">Now You See Me</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">02:54</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">爱情废柴</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:45</span>
+            </li>
+        </ul>
+        <!-- 同名专辑 -->
+        <ul>
+            <li>
+                <p></p>
+                <p>操作</p>
+                <p>音乐标题</p>
+                <p>歌手</p>
+                <p>时长</p>
+            </li>
+            <li>
+                <span class="num">01</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">可爱女人</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:59</span>
+            </li>
+            <li>
+                <span class="num">02</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">完美主义</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:26</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">星晴</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:19</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">娘子</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:31</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">斗牛</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:38</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">黑色幽默</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:43</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">伊斯坦堡</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:29</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">印第安老斑鸠</span>
+                <span class="singer">Jay</span>
+                <span class="timer">05:04</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">龙卷风</span>
+                <span class="singer">Jay</span>
+                <span class="timer">02:54</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">反方向的钟</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:18</span>
+            </li>
+        </ul>
+        <!-- 十一月的萧邦 -->
+        <ul>
+            <li>
+                <p></p>
+                <p>操作</p>
+                <p>音乐标题</p>
+                <p>歌手</p>
+                <p>时长</p>
+            </li>
+            <li>
+                <span class="num">01</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">夜曲</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:46</span>
+            </li>
+            <li>
+                <span class="num">02</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">蓝色风暴</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:47</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">发如雪</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:59</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">黑色毛衣</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:12</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">四面楚歌</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:08</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">枫</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:35</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">浪漫手机</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:00</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">珊瑚海</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:15</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">逆鳞</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:54</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">麦芽糖</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:15</span>
+            </li>
+        </ul>
+        <!-- 十二新作-->
+        <ul>
+            <li>
+                <p></p>
+                <p>操作</p>
+                <p>音乐标题</p>
+                <p>歌手</p>
+                <p>时长</p>
+            </li>
+            <li>
+                <span class="num">01</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">四季列车</span>
+                <span class="singer">Jay</span>
+                <span class="timer">02:39</span>
+            </li>
+            <li>
+                <span class="num">02</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">手语</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:48</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">公公偏头痛</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:03</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">明明就</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:18</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">爱你没差</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:40</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">红尘客栈</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:35</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">梦想启动</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:25</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">大笨种</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:02</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">哪里都是你</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:39</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">马克丽丽</span>
+                <span class="singer">Jay</span>
+                <span class="timer">02:55</span>
+            </li>
+        </ul>
+
+    </div>
+    <div class="banner-middle"></div>
+    <div class="banner-right">
+
+        <!-- 七里香 -->
+        <ul class="showUl" style="display: block">
+            <li>
+                <p></p>
+                <p>操作</p>
+                <p>音乐标题</p>
+                <p>歌手</p>
+                <p>时长</p>
+            </li>
+            <li>
+                <span class="num">01</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">我的地盘</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:04</span>
+            </li>
+            <li>
+                <span class="num">02</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">七里香</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:59</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">借口</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:20</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">外婆</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:04</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">将军</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:24</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">搁浅</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:50</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">乱舞春秋</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:00</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">困兽之斗</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:29</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">园游会</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:15</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">止殇之战</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:34</span>
+            </li>
+        </ul>
+
+        <!-- 依然范特西 -->
+        <ul>
+            <li>
+                <p></p>
+                <p>操作</p>
+                <p>音乐标题</p>
+                <p>歌手</p>
+                <p>时长</p>
+            </li>
+            <li>
+                <span class="num">01</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">爱在西元前</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:54</span>
+            </li>
+            <li>
+                <span class="num">02</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">爸我回来了</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:55</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">简单爱</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:20</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">忍者</span>
+                <span class="singer">Jay</span>
+                <span class="timer">02:38</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">开不了口</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:44</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">上海一九四三</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:15</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">对不起</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:45</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">威廉古堡</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:56</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">双节棍</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:21</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">安静</span>
+                <span class="singer">Jay</span>
+                <span class="timer">05:34</span>
+            </li>
+        </ul>
+
+        <!-- 牛仔很忙 -->
+        <ul>
+            <li>
+                <p></p>
+                <p>操作</p>
+                <p>音乐标题</p>
+                <p>歌手</p>
+                <p>时长</p>
+            </li>
+            <li>
+                <span class="num">01</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">牛仔很忙</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">02:48</span>
+            </li>
+            <li>
+                <span class="num">02</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">彩虹</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:23</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">青花瓷</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:59</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">阳光宅男</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:42</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">蒲公英的约定</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:07</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">无双</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:53</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">我不配</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:48</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">扯</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:03</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">甜甜的</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:15</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">最长的电影</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">03:55</span>
+            </li>
+        </ul>
+
+        <!-- 叶惠美-->
+        <ul>
+            <li>
+                <p></p>
+                <p>操作</p>
+                <p>音乐标题</p>
+                <p>歌手</p>
+                <p>时长</p>
+            </li>
+            <li>
+                <span class="num">01</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">以父之名</span>
+                <span class="singer">Jay</span>
+                <span class="timer">02:39</span>
+            </li>
+            <li>
+                <span class="num">02</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">懦夫</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:48</span>
+            </li>
+            <li>
+                <span class="num">03</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">晴天</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:03</span>
+            </li>
+            <li>
+                <span class="num">04</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">三年二班</span>
+                <span class="singer">周杰伦</span>
+                <span class="timer">04:40</span>
+            </li>
+            <li>
+                <span class="num">05</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">东风破</span>
+                <span class="singer">Jay</span>
+                <span class="timer">05:15</span>
+            </li>
+            <li>
+                <span class="num">06</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">你听得到</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:50</span>
+            </li>
+            <li>
+                <span class="num">07</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">同一种调调</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:51</span>
+            </li>
+            <li>
+                <span class="num">08</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">爱情悬崖</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:22</span>
+            </li>
+            <li>
+                <span class="num">09</span>
+                <span class="control"><img src="images/heart.png"></span>
+                <span class="title">梯田</span>
+                <span class="singer">Jay</span>
+                <span class="timer">03:33</span>
+            </li>
+            <li>
+                <span class="num">10</span>
+                <span class="control"><img src="images/heart-change.png"></span>
+                <span class="title">双刀</span>
+                <span class="singer">Jay</span>
+                <span class="timer">04:51</span>
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+
+<div class="left-content">
+    <p class="title">It's me</p>
+    <p class="txt">
+    <p class="content-one">我是一个阳光，开朗，乐观，有点小强迫症的有为青年！是个十足的影迷，有时间就自己在家看电影，也很喜欢打电竞。
+    </p>
+    <p class="content-two">闲暇之余会下下厨，给自己做顿好吃的。</p>
+    <p class="content-three">
+        我这个人吧，有时候过于善良，看见路边的小猫小狗都会怜悯它们，担心它们吃不好，喝不好，有点瞎操心。总之，我是个感性稍微大于理性的程序猿，不知道这样的我，你是否会喜欢呢？</p>
+    </p>
+</div>
+<div class="right-content">
+    <p>Follow the music to travel.</p>
+    <p>为中华之崛起而编程！</p>
+</div>
+
+<!-- 旋转 -->
+
+<div class="rotate3D">
+    <main>
+        <ul class='-center'>
+            <li>
+                <div class='w'>
+                    <div class='f'>
+                        <svg viewBox='0 0 180 180'>
+                            <image height='100%' preserveAspectRatio='xMidYMid slice' width='100%'
+                                   xlink:href='images/jay01.jpg'></image>
+                        </svg>
+                    </div>
+                    <div class='b'>
+                        <h3>
+                            床边故事
+                        </h3>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class='w'>
+                    <div class='f'>
+                        <svg viewBox='0 0 180 180'>
+                            <image height='100%' preserveAspectRatio='xMidYMid slice' width='100%'
+                                   xlink:href='images/jay03.jpg'></image>
+                        </svg>
+                    </div>
+                    <div class='b'>
+                        <h3>
+                            Jay 同名专辑
+                        </h3>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class='w'>
+                    <div class='f'>
+                        <svg viewBox='0 0 180 180'>
+                            <image height='100%' preserveAspectRatio='xMidYMid slice' width='100%'
+                                   xlink:href='images/jay05.jpg'></image>
+                        </svg>
+                    </div>
+                    <div class='b'>
+                        <h3>
+                            十一月的萧邦
+                        </h3>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class='w'>
+                    <div class='f'>
+                        <svg viewBox='0 0 180 180'>
+                            <image height='100%' preserveAspectRatio='xMidYMid slice' width='100%'
+                                   xlink:href='images/jay07.jpg'></image>
+                        </svg>
+                    </div>
+                    <div class='b'>
+                        <h3>
+                            十二新作
+                        </h3>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class='w'>
+                    <div class='f'>
+                        <svg viewBox='0 0 180 180'>
+                            <image height='100%' preserveAspectRatio='xMidYMid slice' width='100%'
+                                   xlink:href='images/jay02.jpg'></image>
+                        </svg>
+                    </div>
+                    <div class='b'>
+                        <h3>
+                            七里香
+                        </h3>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class='w'>
+                    <div class='f'>
+                        <svg viewBox='0 0 180 180'>
+                            <image height='100%' preserveAspectRatio='xMidYMid slice' width='100%'
+                                   xlink:href='images/jay04.jpg'></image>
+                        </svg>
+                    </div>
+                    <div class='b'>
+                        <h3>
+                            依然范特西
+                        </h3>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class='w'>
+                    <div class='f'>
+                        <svg viewBox='0 0 180 180'>
+                            <image height='100%' preserveAspectRatio='xMidYMid slice' width='100%'
+                                   xlink:href='images/jay06.jpg'></image>
+                        </svg>
+                    </div>
+                    <div class='b'>
+                        <h3>
+                            牛仔很忙
+                        </h3>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class='w'>
+                    <div class='f'>
+                        <svg viewBox='0 0 180 180'>
+                            <image height='100%' preserveAspectRatio='xMidYMid slice' width='100%'
+                                   xlink:href='images/jay08.jpg'></image>
+                        </svg>
+                    </div>
+                    <div class='b'>
+                        <h3>
+                            叶惠美
+                        </h3>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+</div>
+
+<!-- 底部-->
+<div class="footer">
+    <h2>&copy; Jay Vocal concert </h2>
+</div>
+
+<!-- 蒙版 -->
+<div style="display: none" class="mask"></div>
+
+</body>
+
+<!-- Import Scripts -->
+<script src="js/jquery-3.1.1.js"></script>
+<script src="js/rotate.js"></script>
+<script src="js/main.js"></script>
+
+
+</html>

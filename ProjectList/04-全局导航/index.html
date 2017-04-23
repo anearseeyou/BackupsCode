@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: #000;
+        }
+        button {
+            text-rendering: auto;
+            color: initial;
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            margin: 0em 0em 0em 0em;
+            font: 13.3333px Arial;
+        }
+        .nav {
+            position: absolute;
+            right:0;
+            width: 7em;
+            margin: 0 0 0 3em;
+        }
+        .nav__item {
+            line-height: 1;
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0;
+            letter-spacing: 0;
+            color: currentColor;
+            border: 0;
+            background: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        .nav--totit .nav__item {
+            width: 2.5em;
+            height: 2.5em;
+            margin: 0.5em 0;
+        }
+        .nav__item:focus {
+            outline: none;
+        }
+        .nav--totit .nav__item::before {
+            content: '';
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            width: 0.65em;
+            height: 0.65em;
+            margin: -0.325em 0 0 -0.325em;
+            border-radius: 50%;
+            background: #fff;
+            -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+            transition: transform 0.3s, opacity 0.3s;
+            -webkit-animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+            animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+        }
+        .nav--totit .nav__item--current .nav__icon {
+            opacity: 1;
+            -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+        }
+        .nav--totit .nav__icon {
+            z-index: 100;
+            display: block;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            opacity: 0;
+            -webkit-transform: scale3d(0,0,1);
+            transform: scale3d(0,0,1);
+            -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+            transition: transform 0.3s, opacity 0.3s;
+            -webkit-animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+            animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+            fill: #0b64ce;
+        }
+        .nav--totit .nav__item--current .nav__item-title {
+            opacity: 1;
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            -webkit-transition-delay: 0.15s;
+            transition-delay: 0.15s;
+        }
+        .nav--totit .nav__item-title {
+            font-weight: bold;
+            line-height: 2.5em;
+            position: absolute;
+            top: 0;
+            left: 3em;
+            white-space: nowrap;
+            pointer-events: none;
+            opacity: 0;
+            -webkit-transform: translate3d(0,15px,0);
+            transform: translate3d(0,15px,0);
+            -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+            transition: transform 0.3s, opacity 0.3s;
+            -webkit-animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+            animation-timing-function: cubic-bezier(0.2,1,0.3,1);
+            color: #fff;
+        }
+        .nav--totit .nav__item {
+            width: 2.5em;
+            height: 2.5em;
+            margin: 0.5em 0;
+        }
+    </style>
+</head>
+
+<body>
+<svg class="hidden">
+    <defs>
+        <symbol id="icon-pin" viewBox="0 0 24 24">
+            <title>pin</title>
+            <path d="M17.6,2.9L17.6,2.9c-3.1-3.1-8.2-3.1-11.3,0l0,0C3.6,5.7,3.2,11,5.6,14.2l6.4,9.2l6.4-9.2C20.8,11,20.4,5.7,17.6,2.9z M12.1,11.1c-1.5,0-2.6-1.2-2.6-2.6s1.2-2.6,2.6-2.6s2.6,1.2,2.6,2.6S13.5,11.1,12.1,11.1z" />
+        </symbol>
+    </defs>
+</svg>
+<main>
+    <section class="section section--nav" id="Totit">
+        <nav class="nav nav--totit">
+            <button class="nav__item nav__item--current" aria-label="Item 1">
+                <svg class="nav__icon">
+                    <use xlink:href="#icon-pin"></use>
+                </svg>
+                <span class="nav__item-title">Home</span>
+            </button>
+            <button class="nav__item" aria-label="Item 2">
+                <svg class="nav__icon">
+                    <use xlink:href="#icon-pin"></use>
+                </svg>
+                <span class="nav__item-title">Resume</span>
+            </button>
+            <button class="nav__item" aria-label="Item 3">
+                <svg class="nav__icon">
+                    <use xlink:href="#icon-pin"></use>
+                </svg>
+                <span class="nav__item-title">Hobby</span>
+            </button>
+        </nav>
+    </section>
+</main>
+
+<!--<script src="clipboard.min.js"></script>-->
+<script src="main.js"></script>
+<script>
+
+</script>
+</body>
+
+</html>
