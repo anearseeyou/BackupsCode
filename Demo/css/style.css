@@ -1,0 +1,99 @@
+/*data-list*/
+/*
+.container{margin: 20px;}
+.date-content{width: auto; height: auto;}
+.date-list{width: 100%; box-sizing: border-box; border: 1px solid #E8E8E8; overflow: hidden; border-bottom: none;}
+.date-list .date-day{width: 100%; height: 60px; line-height: 60px; border-bottom: 1px solid #E8E8E8; color: #A6A6A6;}
+.date-list .item{float: left;font-size: 14px; color: #969696;}
+.date-list .date-day .item{width: 14.28%; text-align: center;}
+.date-list .list-item .item{ width: 12.834%;}
+.date-list ul{box-sizing: border-box;}
+.date-list .list-item .item{height: 120px; text-align: left; padding: 10px 0 0 20px; margin-top: 0px; border-right: 1px solid #E8E8E8; border-bottom: 1px solid #E8E8E8;}
+.date-list .list-item ul .item:nth-child(7n+7){border-right: 0;}
+.date-list .list-item ul .clear-border{border-right: none;}
+.set-bgcolor{background: #F6F7FA;;}
+.date-list .list-item .item a{text-decoration: none; color: #333; display: block; line-height: 24px; font-size: 13px; position: relative;}
+.date-list .list-item .item-color{color: #ccc;}
+.date-list .list-item .item-color em{float: right;}
+.date-list .list-item .mask{width: 371px; height: 210px; background-color: #fff; position: absolute; left: 140px; top: -33px; z-index: 1; box-sizing: border-box; box-shadow: 1px 1px 10px rgba(204, 204, 204, 0.5); filter:progid:DXImageTransform.Microsoft.Shadow(Strength=4,Direction=135,Color='#000000');}
+.date-list .list-item .movie-detail{display: block; width: 30px; height: 30px; position: absolute; left: -20px; top: 25px;}
+.date-list .list-item .movie-detail img{width: 30px; height: 30px;}
+.date-list .list-item .mask .mask-left{width: 120px; height: 170px;}
+.date-list .list-item .mask .mask-left img{width: 120px; height: 170px;}
+.date-list .list-item .mask-right-top{color: #333; border-bottom: 1px solid #969696;}
+.date-list .list-item .mask-right-top span{font-size: 12px;}
+.date-list .list-item .mask-right-bottom{line-height: 22px;}
+.date-list .list-item .mask-right-bottom p .set-color{color: #FF8219;} 
+*/
+
+
+.calendar {
+    margin: 20px;
+    background-color: #fff;
+    position: relative;
+}
+.date-content{
+    width:auto;
+    height:auto;
+    position: static;
+}
+.pro-title{
+    position: absolute;
+    top: 104px;
+    left:50%;
+    margin-left: -30px;
+}
+.calendar-title {
+    padding: 20px 0 0 0;
+    margin-bottom: 20px;
+}
+.calendar-title a.title {
+    display: inline-block;
+    font-size: 14px;
+}
+.calendar-title .arrow {
+    font-size: 12px;
+}
+.calendar-week .item,
+.calendar-date .item {
+    float: left;
+    font-size: 14px;
+    color: #969696;
+}
+.calendar-week .item{
+    width: 14.28%;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.calendar-week {
+    border: 1px solid #E8E8E8;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top:53px;
+}
+
+.calendar-date .item{
+    width: 12.825%;
+    height: 120px;
+    text-align: left;
+    border: 1px solid #E8E8E8;
+    border-top:none;
+    padding: 10px 0 0 20px;
+    border-right: none;
+}
+
+.calendar-date {
+    border-right: 1px solid #E8E8E8;
+}
+.calendar-date .item {
+    font-size: 14px;
+}
+.calendar-date .item:hover,
+.calendar-date .item-curMonth:hover {
+    background-color: #f0f0f0;
+}
+.calendar-date .item-curMonth {
+    color: #333;
+}
