@@ -1,0 +1,1419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>补贴方-推送列表</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+</head>
+
+<body>
+<!-- Tab切换 -->
+<div class="titWrap">
+    <div class="pageTitle clearfix">
+        <div class="lBtn"></div>
+        <div class="tabWrap cur">
+            <div>
+                <span class="tit">申请单列表</span>
+                <span class="tit">推送列表</span>
+                <span class="tab cur">推送：项目详情</span>
+            </div>
+        </div>
+        <div class="rBtn"></div>
+    </div>
+</div>
+
+<!--申请单列表-->
+<div class="tabContent p20">
+    <div class="whiteBg p20">
+        <div class="title">筛选</div>
+        <form class="searchBlock clearfix mt20">
+            <div class="clearfix">
+                <div class="simulateSelect clearfix">
+                    <span class="lable fl">影片名称：</span>
+                    <div class="conWidth fl">
+                        <input type="text" class="conInput text_s fl nameWidth" value="" placeholder="输入关键字"/>
+                        <ul style="display: none" class="selectContent conUlWidth">
+                            <li>关联词</li>
+                            <li>关联词关联词关联词关联词关联词关联词</li>
+                            <li>关联词</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="simulateSelect clearfix">
+                    <span class="lable fl">申请单位：</span>
+
+                    <div class="fixWidth fl">
+                        <input type="text" class="fixInput text_s fl setWidth" value="" placeholder="输入关键字"/>
+                        <ul style="display:none;" class="selectContent fixUl setWidth">
+                            <li>关联词</li>
+                            <li>关联词关联词关联词关联词关联词关联词</li>
+                            <li>关联词</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="simulateSelect clearfix">
+                    <span class="lable fl">使用单位：</span>
+                    <div class="fixWidth fl">
+                        <input type="text" class="fixInput text_s fl setWidth" value="" placeholder="输入关键字"/>
+                        <ul style="display: none;" class="selectContent fixUl setWidth">
+                            <li>关联词</li>
+                            <li>关联词关联词关联词关联词关联词关联词</li>
+                            <li>关联词</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="simulateSelect clearfix">
+                    <span class="lable fl">申请时间：</span>
+                    <input type="text" class="text_s timeW fl" value="" placeholder="2017.07.08"/> <i class="zhi fl">
+                    至 </i>
+                    <input type="text" class="text_s timeW fl" value="" placeholder="2017.07.08"/>
+                </div>
+            </div>
+            <div class="clearfix mt10">
+                <span class="lable fl">票补规则：</span>
+                <select name="" id="" class="text_s fl">
+                    <option value="0">2017-01-01</option>
+                    <option value="1">2017-01-02</option>
+                    <option value="2">2017-01-03</option>
+                    <option value="3">2017-01-04</option>
+                </select>
+            </div>
+            <div class="clearfix mt10">
+                <div class="simulateSelect clearfix">
+                    <span class="lable1 fl">申请单来源：</span>
+                    <select name="" id="" class="text_s fl">
+                        <option value="0">全部</option>
+                        <option value="1">影院申请</option>
+                        <option value="2">院线申请</option>
+                        <option value="3">推送</option>
+                    </select>
+                </div>
+            </div>
+            <div class="clearfix mt10">
+                <span class="lable1 fl">申请单状态：</span>
+                <select name="" id="" class="text_s fl">
+                    <option value="0">全部</option>
+                    <option value="1">待审批</option>
+                    <option value="2">执行中</option>
+                    <option value="3">审批未通过</option>
+                    <option value="">未达标</option>
+                    <option value="">已达标</option>
+                    <option value="">申请方已取消</option>
+                </select>
+            </div>
+            <div class="clearfix mt10">
+                <span class="lable fl">拨付状态：</span>
+                <select class="text_s fl">
+                    <option value="0">未拨付</option>
+                    <option value="1">已拨付</option>
+                    <option value="2">拨付中</option>
+                </select>
+            </div>
+            <div class="clearfix mt10">
+                <span class="lable fl">联系人：</span><input type="text" class="text_s fl" value=""/>
+            </div>
+            <div class="clearfix mt10">
+                <span class="lable fl">联系电话：</span><input type="text" class="text_s fl" value=""/>
+            </div>
+            <div class="clearfix mt10">
+                <input type="button" class="blue_s ml10 fl" value="查询"/>
+                <input type="button" class="blue_s ml10 fl" value="重置"/>
+            </div>
+
+        </form>
+    </div>
+    <div class="listInfo mt20 checkClick clearfix">
+        <em class="fr"> 第 10/25 页</em>
+        <span>共 235 个申请单</span>
+        <span class="checkboxLabel ml20">审批工作台模式</span>
+    </div>
+    <div class="applyList clearfix">
+        <dl>
+            <dt>
+                <em class="fr">申请单来源：影院申请／院线申请／推送</em>
+                <span>编号：SQ170301001</span>
+            </dt>
+            <dd class="applyDetailInfo cur">
+                <ul class="moneyInfo fl">
+                    <li class="clearfix">
+                        <span class="label">票补规则：</span>
+                        <a href="" class="blue unfoldFilmInfo">
+                            一条狗的使命 2017.06.11
+                            <div class="filmInfoBlock p20">
+                                <div class="date-left fl">
+                                    <img src="../img/demo/f2.jpg" alt="">
+                                </div>
+                                <div class="date-right fl ml10">
+                                    <div class="mask-right-top">
+                                        <div class="f14 mb10">大话西游之大圣娶亲</div>
+                                        <p>
+                                            <span>票补总额：15,000,000,000.00</span><br>
+                                            <span>可用余额：15,000,000,000.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mask-right-bottom fl">
+                                        <div class="title mt10 mb5">
+                                            2017年05.06 票补计划
+                                        </div>
+                                        <div>
+                                            <span class="gray33">达标规则：排片率12% 上座率51%</span>
+                                        </div>
+                                        <div class="clearfix"><span class="fr gray33">时段 全天/20:00-23:00</span></div>
+                                        <div class="f14"><span class="gray33">申请单数：</span><span
+                                                class="orange">10095</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请金额：</span>1,000,000.00元
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批金额：</span>-
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批时间：</span>-
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请时间：</span>2017.05.31 14:35:59
+                        </div>
+                        <div class="fl">
+                            <span class="label">申请单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                        <div class="fl">
+                            <span class="label">使用单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">联系人：</span>李陈忠
+                        </div>
+                        <div class="fl">
+                            <span class="label">联系电话：</span>15010172431
+                        </div>
+                    </li>
+                    <li class="clearfix unfoldContent">
+                        <span>达标信息：2017.06.11    20:00-22:59</span>
+                        <ul class="goalInfo ticketInfo mt5">
+                            <li class="clearfix">
+                                <div class="gray96">指标项</div>
+                                <div class="gray96">保底要求</div>
+                                <div class="gray96">申请方承诺</div>
+                                <div class="gray96">实际情况</div>
+                                <div class="gray96">偏差情况</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>排片率</div>
+                                <div>12%</div>
+                                <div>15%</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>上座率</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="unfoldContent">
+                        <span class="label">申请备注：</span>
+                        <p>一个幽灵，共产主义的幽灵，在欧洲游荡。为了对这个幽灵进行神圣的围剿，旧欧洲的一切势力，教皇和沙皇、梅特涅和基佐、法国的激进派和德国的警察，都联合起来了。</p>
+                    </li>
+                </ul>
+                <div class="fl">
+                    <div class="p20">
+                        <p>申请单状态：待审批</p>
+                        <p>拨付状态：-</p>
+                        <p><input type="button" name="" class="white_s" value="审批"/></p>
+                        <p><a href="" class="blue viewLog">查看日志</a></p>
+                    </div>
+                </div>
+                <div class="unfoldBtn cur blue">达标信息</div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">申请单来源：影院申请／院线申请／推送</em>
+                <span>编号：SQ170301001</span>
+            </dt>
+            <dd class="applyDetailInfo cur">
+                <ul class="moneyInfo fl">
+                    <li class="clearfix">
+                        <span class="label">票补规则：</span>
+                        <a href="" class="blue unfoldFilmInfo">
+                            一条狗的使命 2017.06.11
+                            <div class="filmInfoBlock p20">
+                                <div class="date-left fl">
+                                    <img src="../img/demo/f2.jpg" alt="">
+                                </div>
+                                <div class="date-right fl ml10">
+                                    <div class="mask-right-top">
+                                        <div class="f14 mb10">大话西游之大圣娶亲</div>
+                                        <p>
+                                            <span>票补总额：15,000,000,000.00</span><br>
+                                            <span>可用余额：15,000,000,000.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mask-right-bottom fl">
+                                        <div class="title mt10 mb5">
+                                            2017年05.06 票补计划
+                                        </div>
+                                        <div>
+                                            <span class="gray33">达标规则：排片率12% 上座率51%</span>
+                                        </div>
+                                        <div class="clearfix"><span class="fr gray33">时段 全天/20:00-23:00</span></div>
+                                        <div class="f14"><span class="gray33">申请单数：</span><span
+                                                class="orange">10095</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请金额：</span>1,000,000.00元
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批金额：</span>-
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批时间：</span>-
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请时间：</span>2017.05.31 14:35:59
+                        </div>
+                        <div class="fl">
+                            <span class="label">申请单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                        <div class="fl">
+                            <span class="label">使用单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">联系人：</span>李陈忠
+                        </div>
+                        <div class="fl">
+                            <span class="label">联系电话：</span>15010172431
+                        </div>
+                    </li>
+                    <li class="clearfix unfoldContent">
+                        <span>达标信息：2017.06.11    20:00-22:59</span>
+                        <ul class="goalInfo ticketInfo mt5">
+                            <li class="clearfix">
+                                <div class="gray96">指标项</div>
+                                <div class="gray96">保底要求</div>
+                                <div class="gray96">申请方承诺</div>
+                                <div class="gray96">实际情况</div>
+                                <div class="gray96">偏差情况</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>排片率</div>
+                                <div>12%</div>
+                                <div>15%</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>上座率</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="unfoldContent">
+                        <span class="label">申请备注：</span>
+                        <p>一个幽灵，共产主义的幽灵，在欧洲游荡。为了对这个幽灵进行神圣的围剿，旧欧洲的一切势力，教皇和沙皇、梅特涅和基佐、法国的激进派和德国的警察，都联合起来了。</p>
+                    </li>
+                </ul>
+                <div class="fl">
+                    <div class="p20">
+                        <p>申请单状态：待审批</p>
+                        <p>拨付状态：未拨付</p>
+                        <p><input type="button" name="" class="white_s" value="再次拨付"/></p>
+                        <p><a href="" class="blue viewLog">查看日志</a></p>
+                    </div>
+                </div>
+                <div class="unfoldBtn cur blue">达标信息</div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">申请单来源：影院申请／院线申请／推送</em>
+                <span>编号：SQ170301001</span>
+            </dt>
+            <dd class="applyDetailInfo cur">
+                <ul class="moneyInfo fl">
+                    <li class="clearfix">
+                        <span class="label">票补规则：</span>
+                        <a href="" class="blue unfoldFilmInfo">
+                            一条狗的使命 2017.06.11
+                            <div class="filmInfoBlock p20">
+                                <div class="date-left fl">
+                                    <img src="../img/demo/f2.jpg" alt="">
+                                </div>
+                                <div class="date-right fl ml10">
+                                    <div class="mask-right-top">
+                                        <div class="f14 mb10">大话西游之大圣娶亲</div>
+                                        <p>
+                                            <span>票补总额：15,000,000,000.00</span><br>
+                                            <span>可用余额：15,000,000,000.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mask-right-bottom fl">
+                                        <div class="title mt10 mb5">
+                                            2017年05.06 票补计划
+                                        </div>
+                                        <div>
+                                            <span class="gray33">达标规则：排片率12% 上座率51%</span>
+                                        </div>
+                                        <div class="clearfix"><span class="fr gray33">时段 全天/20:00-23:00</span></div>
+                                        <div class="f14"><span class="gray33">申请单数：</span><span
+                                                class="orange">10095</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请金额：</span>1,000,000.00元
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批金额：</span>-
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批时间：</span>-
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请时间：</span>2017.05.31 14:35:59
+                        </div>
+                        <div class="fl">
+                            <span class="label">申请单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                        <div class="fl">
+                            <span class="label">使用单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">联系人：</span>李陈忠
+                        </div>
+                        <div class="fl">
+                            <span class="label">联系电话：</span>15010172431
+                        </div>
+                    </li>
+                    <li class="clearfix unfoldContent">
+                        <span>达标信息：2017.06.11    20:00-22:59</span>
+                        <ul class="goalInfo ticketInfo mt5">
+                            <li class="clearfix">
+                                <div class="gray96">指标项</div>
+                                <div class="gray96">保底要求</div>
+                                <div class="gray96">申请方承诺</div>
+                                <div class="gray96">实际情况</div>
+                                <div class="gray96">偏差情况</div>
+                                <span class="standardState s1"></span>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>排片率</div>
+                                <div>12%</div>
+                                <div>15%</div>
+                                <div>-</div>
+                                <div class="red">-5%</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>上座率</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="unfoldContent">
+                        <span class="label">申请备注：</span>
+                        <p>一个幽灵，共产主义的幽灵，在欧洲游荡。为了对这个幽灵进行神圣的围剿，旧欧洲的一切势力，教皇和沙皇、梅特涅和基佐、法国的激进派和德国的警察，都联合起来了。</p>
+                    </li>
+                </ul>
+                <div class="fl">
+                    <div class="p20">
+                        <p>申请单状态：待审批</p>
+                        <p>拨付状态：--</p>
+                        <p><input type="button" name="" class="white_s" value="审批"/></p>
+                        <p><a href="" class="blue viewLog">查看日志</a></p>
+                    </div>
+                </div>
+                <div class="unfoldBtn cur blue">达标信息</div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">申请单来源：影院申请／院线申请／推送</em>
+                <span>编号：SQ170301001</span>
+            </dt>
+            <dd class="applyDetailInfo cur">
+                <ul class="moneyInfo fl">
+                    <li class="clearfix">
+                        <span class="label">票补规则：</span>
+                        <a href="" class="blue unfoldFilmInfo">
+                            一条狗的使命 2017.06.11
+                            <div class="filmInfoBlock p20">
+                                <div class="date-left fl">
+                                    <img src="../img/demo/f2.jpg" alt="">
+                                </div>
+                                <div class="date-right fl ml10">
+                                    <div class="mask-right-top">
+                                        <div class="f14 mb10">大话西游之大圣娶亲</div>
+                                        <p>
+                                            <span>票补总额：15,000,000,000.00</span><br>
+                                            <span>可用余额：15,000,000,000.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mask-right-bottom fl">
+                                        <div class="title mt10 mb5">
+                                            2017年05.06 票补计划
+                                        </div>
+                                        <div>
+                                            <span class="gray33">达标规则：排片率12% 上座率51%</span>
+                                        </div>
+                                        <div class="clearfix"><span class="fr gray33">时段 全天/20:00-23:00</span></div>
+                                        <div class="f14"><span class="gray33">申请单数：</span><span
+                                                class="orange">10095</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请金额：</span>1,000,000.00元
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批金额：</span>-
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批时间：</span>-
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请时间：</span>2017.05.31 14:35:59
+                        </div>
+                        <div class="fl">
+                            <span class="label">申请单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                        <div class="fl">
+                            <span class="label">使用单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">联系人：</span>李陈忠
+                        </div>
+                        <div class="fl">
+                            <span class="label">联系电话：</span>15010172431
+                        </div>
+                    </li>
+                    <li class="clearfix unfoldContent">
+                        <span>达标信息：2017.06.11    20:00-22:59</span>
+                        <ul class="goalInfo ticketInfo mt5">
+                            <li class="clearfix">
+                                <div class="gray96">指标项</div>
+                                <div class="gray96">保底要求</div>
+                                <div class="gray96">申请方承诺</div>
+                                <div class="gray96">实际情况</div>
+                                <div class="gray96">偏差情况</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>排片率</div>
+                                <div>12%</div>
+                                <div>15%</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>上座率</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="unfoldContent">
+                        <span class="label">申请备注：</span>
+                        <p>一个幽灵，共产主义的幽灵，在欧洲游荡。为了对这个幽灵进行神圣的围剿，旧欧洲的一切势力，教皇和沙皇、梅特涅和基佐、法国的激进派和德国的警察，都联合起来了。</p>
+                    </li>
+                </ul>
+                <div class="fl">
+                    <div class="p20">
+                        <p>申请单状态：审核未通过</p>
+                        <p>拨付状态：--</p>
+                        <!--<p><input type="button" name="" class="white_s" value="审批"/></p>-->
+                        <p><a href="" class="blue viewLog">查看日志</a></p>
+                    </div>
+                </div>
+                <div class="unfoldBtn cur blue">达标信息</div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">申请单来源：影院申请／院线申请／推送</em>
+                <span>编号：SQ170301001</span>
+            </dt>
+            <dd class="applyDetailInfo">
+                <ul class="moneyInfo fl">
+                    <li class="clearfix">
+                        <span class="label">票补规则：</span>
+                        <a href="" class="blue unfoldFilmInfo">
+                            一条狗的使命 2017.06.11
+                            <div class="filmInfoBlock p20">
+                                <div class="date-left fl">
+                                    <img src="../img/demo/f2.jpg" alt="">
+                                </div>
+                                <div class="date-right fl ml10">
+                                    <div class="mask-right-top">
+                                        <div class="f14 mb10">大话西游之大圣娶亲</div>
+                                        <p>
+                                            <span>票补总额：15,000,000,000.00</span><br>
+                                            <span>可用余额：15,000,000,000.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mask-right-bottom fl">
+                                        <div class="title mt10 mb5">
+                                            2017年05.06 票补计划
+                                        </div>
+                                        <div>
+                                            <span class="gray33">达标规则：排片率12% 上座率51%</span>
+                                        </div>
+                                        <div class="clearfix"><span class="fr gray33">时段 全天/20:00-23:00</span></div>
+                                        <div class="f14"><span class="gray33">申请单数：</span><span
+                                                class="orange">10095</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请金额：</span>1,000,000.00元
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批金额：</span>-
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批时间：</span>-
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请时间：</span>2017.05.31 14:35:59
+                        </div>
+                        <div class="fl">
+                            <span class="label">申请单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                        <div class="fl">
+                            <span class="label">使用单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">联系人：</span>李陈忠
+                        </div>
+                        <div class="fl">
+                            <span class="label">联系电话：</span>15010172431
+                        </div>
+                    </li>
+                    <li class="clearfix unfoldContent">
+                        <span>达标信息：2017.06.11    20:00-22:59</span>
+                        <ul class="goalInfo ticketInfo mt5">
+                            <li class="clearfix">
+                                <div class="gray96">指标项</div>
+                                <div class="gray96">保底要求</div>
+                                <div class="gray96">申请方承诺</div>
+                                <div class="gray96">实际情况</div>
+                                <div class="gray96">偏差情况</div>
+                                <span class="standardState s3"></span>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>排片率</div>
+                                <div>12%</div>
+                                <div>15%</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>上座率</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="unfoldContent">
+                        <span class="label">申请备注：</span>
+                        <p>一个幽灵，共产主义的幽灵，在欧洲游荡。为了对这个幽灵进行神圣的围剿，旧欧洲的一切势力，教皇和沙皇、梅特涅和基佐、法国的激进派和德国的警察，都联合起来了。</p>
+                    </li>
+                </ul>
+                <div class="fl">
+                    <div class="p20">
+                        <p>申请单状态：执行中</p>
+                        <p>拨付状态：未拨付</p>
+                        <!--<p><input type="button" name="" class="white_s" value="审批"/></p>-->
+                        <p><a href="" class="blue viewLog">查看日志</a></p>
+                    </div>
+                </div>
+                <div class="unfoldBtn blue">收起</div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">申请单来源：影院申请／院线申请／推送</em>
+                <span>编号：SQ170301001</span>
+            </dt>
+            <dd class="applyDetailInfo">
+                <ul class="moneyInfo fl">
+                    <li class="clearfix">
+                        <span class="label">票补规则：</span>
+                        <a href="" class="blue unfoldFilmInfo">
+                            一条狗的使命 2017.06.11
+                            <div class="filmInfoBlock p20">
+                                <div class="date-left fl">
+                                    <img src="../img/demo/f2.jpg" alt="">
+                                </div>
+                                <div class="date-right fl ml10">
+                                    <div class="mask-right-top">
+                                        <div class="f14 mb10">大话西游之大圣娶亲</div>
+                                        <p>
+                                            <span>票补总额：15,000,000,000.00</span><br>
+                                            <span>可用余额：15,000,000,000.00</span>
+                                        </p>
+                                    </div>
+
+                                    <div class="mask-right-bottom fl">
+                                        <div class="title mt10 mb5">
+                                            2017年05.06 票补计划
+                                        </div>
+                                        <div>
+                                            <span class="gray33">达标规则：排片率12% 上座率51%</span>
+                                        </div>
+                                        <div class="clearfix"><span class="fr gray33">时段 全天/20:00-23:00</span></div>
+                                        <div class="f14"><span class="gray33">申请单数：</span><span
+                                                class="orange">10095</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请金额：</span>1,000,000.00元
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批金额：</span>-
+                        </div>
+                        <div class="fl">
+                            <span class="label">审批时间：</span>-
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">申请时间：</span>2017.05.31 14:35:59
+                        </div>
+                        <div class="fl">
+                            <span class="label">申请单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                        <div class="fl">
+                            <span class="label">使用单位：</span><a href="" class="blue">星美国际影城三里屯店</a>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="fl">
+                            <span class="label">联系人：</span>李陈忠
+                        </div>
+                        <div class="fl">
+                            <span class="label">联系电话：</span>15010172431
+                        </div>
+                    </li>
+                    <li class="clearfix unfoldContent">
+                        <span>达标信息：2017.06.11    20:00-22:59</span>
+                        <ul class="goalInfo ticketInfo mt5">
+                            <li class="clearfix">
+                                <div class="gray96">指标项</div>
+                                <div class="gray96">保底要求</div>
+                                <div class="gray96">申请方承诺</div>
+                                <div class="gray96">实际情况</div>
+                                <div class="gray96">偏差情况</div>
+                                <span class="standardState s2"></span>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>排片率</div>
+                                <div>12%</div>
+                                <div>15%</div>
+                                <div>-</div>
+                                <div>-</div>
+                            </li>
+                            <li class="clearfix dd">
+                                <div>上座率</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div>-</div>
+                                <div class="green">+1%</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="unfoldContent">
+                        <span class="label">申请备注：</span>
+                        <p>一个幽灵，共产主义的幽灵，在欧洲游荡。为了对这个幽灵进行神圣的围剿，旧欧洲的一切势力，教皇和沙皇、梅特涅和基佐、法国的激进派和德国的警察，都联合起来了。</p>
+                    </li>
+                </ul>
+                <div class="fl">
+                    <div class="p20">
+                        <p>申请单状态：已达标</p>
+                        <p>拨付状态：已拨付</p>
+                        <p><input type="button" name="" class="white_s invoice-confirm" value="发票确认"/></p>
+                        <!--<p><a href="" class="blue viewLog">查看日志</a></p>-->
+                    </div>
+                </div>
+                <div class="unfoldBtn blue">收起</div>
+            </dd>
+        </dl>
+        <div class="pages mt10 clearfix p1">
+            <em class="fl gray96">共15页</em>
+            <span class="cur">首页</span>
+            <span>上一页</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>下一页</span>
+            <span>尾页</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--申请单列表 end-->
+
+<!--推送列表-->
+<div class="tabContent p20 none">
+    <div class="whiteBg p20">
+        <div class="title">筛选</div>
+        <div class="searchBlock clearfix mt20">
+            <div class="clearfix">
+                <span class="lable fl">影片名称：</span>
+                <div class="conWidth fl">
+                    <input type="text" class="conInput text_s fl nameWidth" value="" placeholder="输入关键字"/>
+                    <ul style="display: none;" class="selectContent conUlWidth">
+                        <li>关联词</li>
+                        <li>关联词关联词关联词关联词关联词关联词</li>
+                        <li>关联词</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix">
+                <span class="lable fl">票补规则：</span>
+                <select class="text_s fl">
+                    <option value="0">2017-01-01</option>
+                    <option value="1">2017-01-02</option>
+                    <option value="2">2017-01-03</option>
+                    <option value="3">2017-01-04</option>
+                </select>
+            </div>
+            <div class="clearfix">
+                <span class="lable fl">推送状态：</span>
+                <select class="text_s fl">
+                    <option value="0">全部</option>
+                    <option value="1">待接受</option>
+                    <option value="2">已接受</option>
+                    <option value="3">已拒绝</option>
+                    <option value="">已失效</option>
+                    <option value="">已取消</option>
+                </select>
+            </div>
+            <div class="clearfix">
+
+
+                <span class="lable fl">推送单位：</span>
+                <div class="fixWidth fl">
+                    <input type="text" value="" class="fixInput text_s fl" placeholder="输入名称关键字"/>
+                    <ul style="display: none;" class="selectContent fixUl setWidth">
+                        <li>关联词</li>
+                        <li>关联词关联词关联词关联词关联词关联词</li>
+                        <li>关联词</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix mt10">
+                <span class="lable fl">推送时间：</span>
+                <input type="text" class="text_s timeW fl" value="" placeholder="2017.07.08"/> <i class="zhi fl"> 至 </i>
+                <input type="text" class="text_s timeW fl" value="" placeholder="2017.07.08"/>
+            </div>
+            <div class="clearfix mt10">
+                <input type="button" class="blue_s ml10" value="查询"/>
+                <input type="button" class="blue_s ml10" value="重置"/>
+            </div>
+        </div>
+    </div>
+    <div class="clear applyListTitle mt20">
+        <div class="tableTitle clearfix">
+            <div class="w3"><span class="col1">票补信息</span></div>
+            <div class="w5"><span>推送方</span></div>
+            <div class="w4"><span class="tr">申请金额(元)</span></div>
+            <div class="w5"><span>承诺条件</span></div>
+            <div class="w5 fr"><span>操作</span></div>
+        </div>
+    </div>
+    <div class="applyList">
+        <dl>
+            <dt>
+                <span>推送时间：2017.05.29 14:00:00</span>
+            </dt>
+            <dd>
+                <div class="tableTitle clearfix">
+                    <div class="w3 clearfix">
+                        <div class="imgs">
+                            <img src="../img/demo/f2.jpg" alt="一条狗的使命">
+                        </div>
+                        <h5 class="f14">一条狗的使命</h5>
+                        <p>上映日期：2017.05.31</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt34">星美国际影城三里屯店</p>
+                        <p class="gray96">靠谱指数：85</p>
+                    </div>
+                    <div class="w4">
+                        <p class="tr mt46">250,000</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt5">日期：2016.06.01</p>
+                        <p>时段：20:00至23:00</p>
+                        <p>保底排片率：12%</p>
+                        <p>保底上座率：50%</p>
+                    </div>
+                    <div class="w5">
+                        <div class="operateBox">
+                            <em class="micro-block">已接受</em>
+                            <input type="button" class="white_s micro-ml" value="查看申请单">
+                        </div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">创建时间：2017.05.29 14:00:00</em>
+                <span>推送时间：2017.05.29 14:00:00</span>
+                <span>联系人：李黎明</span>
+                <span>联系电话：15010175643</span>
+            </dt>
+            <dd>
+                <div class="tableTitle clearfix">
+                    <div class="w3 clearfix">
+                        <div class="imgs">
+                            <img src="../img/demo/f1.jpg" alt="一条狗的使命">
+                        </div>
+                        <h5 class="f14">一条狗的使命</h5>
+                        <p>上映日期：2017.05.31</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt34">星美国际影城三里屯店</p>
+                        <p class="gray96">靠谱指数：85</p>
+                    </div>
+                    <div class="w4">
+                        <p class="tr mt46">250,000</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt5">日期：2016.06.01</p>
+                        <p>时段：20:00至23:00</p>
+                        <p>保底排片率：12%</p>
+                        <p>保底上座率：50%</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt20">有效，待接受</p>
+                        <p class="gray96">失效时间：2017.05.31 23:59:59</p>
+                        <div class="mt10">
+                            <input type="button" class="white_s" value="取消">
+                        </div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">创建时间：2017.05.29 14:00:00</em>
+                <span>推送时间：2017.05.29 14:00:00</span>
+                <span>联系人：李黎明</span>
+                <span>联系电话：15010175643</span>
+            </dt>
+            <dd>
+                <div class="tableTitle clearfix">
+                    <div class="w3 clearfix">
+                        <div class="imgs">
+                            <img src="../img/demo/f3.jpg" alt="一条狗的使命">
+                        </div>
+                        <h5 class="f14">一条狗的使命</h5>
+                        <p>上映日期：2017.05.31</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt34">星美国际影城三里屯店</p>
+                        <p class="gray96">靠谱指数：85</p>
+                    </div>
+                    <div class="w4">
+                        <p class="tr mt46">250,000</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt5">日期：2016.06.01</p>
+                        <p>时段：20:00至23:00</p>
+                        <p>保底排片率：12%</p>
+                        <p>保底上座率：50%</p>
+                    </div>
+                    <div class="w5">
+                        <div class="operateBox">
+                            <em>已拒绝</em>
+                        </div>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">创建时间：2017.05.29 14:00:00</em>
+                <span>推送时间：2017.05.29 14:00:00</span>
+                <span>联系人：李黎明</span>
+                <span>联系电话：15010175643</span>
+            </dt>
+            <dd>
+                <div class="tableTitle clearfix">
+                    <div class="w3 clearfix">
+                        <div class="imgs">
+                            <img src="../img/demo/f4.jpg" alt="一条狗的使命">
+                        </div>
+                        <h5 class="f14">一条狗的使命</h5>
+                        <p>上映日期：2017.05.31</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt34">星美国际影城三里屯店</p>
+                        <p class="gray96">靠谱指数：85</p>
+                    </div>
+                    <div class="w4">
+                        <p class="tr mt46">250,000</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt5">日期：2016.06.01</p>
+                        <p>时段：20:00至23:00</p>
+                        <p>保底排片率：12%</p>
+                        <p>保底上座率：50%</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt34">已失效</p>
+                        <p class="gray96">于2017-05-31 23:59:59 失效</p>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <dl>
+            <dt>
+                <em class="fr">创建时间：2017.05.29 14:00:00</em>
+                <span>推送时间：2017.05.29 14:00:00</span>
+                <span>联系人：李黎明</span>
+                <span>联系电话：15010175643</span>
+            </dt>
+            <dd>
+                <div class="tableTitle clearfix">
+                    <div class="w3 clearfix">
+                        <div class="imgs">
+                            <img src="../img/demo/f5.jpg" alt="一条狗的使命">
+                        </div>
+                        <h5 class="f14">一条狗的使命</h5>
+                        <p>上映日期：2017.05.31</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt34">星美国际影城三里屯店</p>
+                        <p class="gray96">靠谱指数：85</p>
+                    </div>
+                    <div class="w4">
+                        <p class="tr mt46">250,000</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt5">日期：2016.06.01</p>
+                        <p>时段：20:00至23:00</p>
+                        <p>保底排片率：12%</p>
+                        <p>保底上座率：50%</p>
+                    </div>
+                    <div class="w5">
+                        <p class="mt34">已失效</p>
+                        <p class="gray96">于2017-05-31 23:59:59 失效</p>
+                    </div>
+                </div>
+            </dd>
+        </dl>
+        <div class="pages mt10 clearfix p1">
+            <em class="fl gray96">共15页</em>
+            <span class="cur">首页</span>
+            <span>上一页</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>下一页</span>
+            <span>尾页</span>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!--推送列表 end-->
+
+<!--推送详情页 -->
+<div class="tabContent p20 checkClick">
+    <div class="whiteBg p20">
+        <div class="title">项目信息</div>
+        <div class="moviePoster fl clearfix">
+            <img src="../img/demo/f1.jpg" alt="">
+        </div>
+        <ul class="movieList clearfix">
+            <li>
+                <p class="f14 dogTask">一条狗的使命</p>
+                <p>上映日期：2017.05.31</p>
+                <p>类型：3D, IMAX</p>
+                <p>影片排次号：F23243546</p>
+            </li>
+            <li>
+                <p class="f14 dogTask">票补规则 2017.06.01</p>
+                <p>申请基数：¥5000.00</p>
+                <p>时段：全天</p>
+                <p>
+                    <span>排片率：12%</span>
+                    <span>上座率：15%</span>
+                </p>
+            </li>
+            <li>
+                <p class="f14 dogTask">已推送：3456</p>
+                <p>影院数：1456</p>
+                <p>院线数：2000</p>
+                <p>
+                    <span>已接受：357</span>
+                    <span>未接受：568</span>
+                    <span>未响应：895</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="whiteBg p20 mt20">
+        <form action="">
+            <div class="title">推送给影院推送给院线</div>
+            <div class="searchBlock clearfix mt20">
+                <div class="clearfix">
+                    <span class="spa-text lable fl">名称：</span>
+                    <div class="option-text fl">
+                        <input type="text" class="inp-text text_s fl" value="" placeholder="影院名称"/>
+                        <ul style="display: none;" class="pos-text">
+                            <li>关联词</li>
+                            <li>关联词关联词关联词关联</li>
+                            <li>关联词</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sel-text clearfix">
+                    <span class="lable fl">省：</span>
+                    <select class="text_s fl">
+                        <option value="0">全部</option>
+                        <option value="1">山西</option>
+                        <option value="2">河北</option>
+                        <option value="3">广东</option>
+                    </select>
+                </div>
+                <div class="sel-text clearfix">
+                    <span class="lable fl">市：</span>
+                    <select class="text_s fl">
+                        <option value="0">全部</option>
+                        <option value="1">北京</option>
+                        <option value="2">天津</option>
+                    </select>
+                </div>
+                <div class="sel-text clearfix">
+                    <span class="lable fl">区/县：</span>
+                    <select class="text_s fl">
+                        <option value="0">全部</option>
+                        <option value="1">老挝</option>
+                        <option value="2">越南</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cityInfo mt20 clearfix">
+                <span class="cityDetial checkboxLabel"></span><span>全国</span>
+                <span class="cityDetial checkboxLabel"></span><span>四线城市一线城市</span>
+                <span class="cityDetial checkboxLabel"></span><span>二线城市</span>
+                <span class="cityDetial checkboxLabel"></span><span>三线城市</span>
+                <span class="cityDetial checkboxLabel"></span><span>四线城市</span>
+            </div>
+            <div class="boxOfficeInfo mt20">
+                <div class="boxOfficeMon fl">
+                    <span class="cityDetial checkboxLabel"></span><span>年票房区间限制：</span>
+                    <input class="text_s inp-mask2" type="text" placeholder="300.00"><span>万元</span>
+                    <span class="zhi">至</span>
+                    <input class="text_s inp-mask2" type="text" placeholder="300.00"><span>万元</span>
+                </div>
+                <div class="boxOfficeMon fl">
+                    <span>院线：</span>
+                    <select class="text_s sel-only">
+                        <option value="0">全部</option>
+                        <option value="1">万达</option>
+                        <option value="2">大润发</option>
+                    </select>
+                </div>
+                <div class="boxOfficeMon fl">
+                    <span>影院：</span>
+                    <select class="text_s sel-only">
+                        <option value="0">全部</option>
+                        <option value="1">万达</option>
+                        <option value="2">大润发</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="cityInfo mt20 clearfix">
+            <span class="cityDetial checkboxLabel"></span><span class="withoutSpan">支持影片制式：</span>
+            <span class="cityDetial checkboxLabel"></span><span>2D</span>
+            <span class="cityDetial checkboxLabel"></span><span>3D</span>
+            <span class="cityDetial checkboxLabel"></span><span>4D</span>
+            <span class="cityDetial checkboxLabel"></span><span class="imax">IMAX</span>
+            <input type="button" class="blue_s ml10 fl confirm" value="确定">
+        </div>
+    </div>
+    <div class="whiteBg mt20">
+        <div class="con-head pl20 clearfix">
+            <form action="">
+                <div class="fl con-head-left">
+                    <span>推送票补(万达影院)：</span>
+                    <span class="much-money">金额</span>
+                    <input type="text" class="con-money text_s" placeholder="300.00">
+                </div>
+                <div class="fl con-head-middle">
+                    <span>保底排片率：</span>
+                    <input type="text" class="add-percent text_s" placeholder="12">
+                    <span class="maskBar">
+                        <i class="topBar"></i>
+                        <i class="bottomBar"></i>
+                    </span>
+                    %
+                </div>
+                <div class="fl con-head-right">
+                    <span>保底上座率：</span>
+                    <input type="text" class="sub-percent text_s" placeholder="16">
+                    <span class="maskBar">
+                    <i class="addBar"></i>
+                    <i class="subBar"></i>
+                </span>
+                    %
+                </div>
+            </form>
+            <input type="button" class="pushBtn blue_s" value="推送">
+        </div>
+
+        <div class="con-list p20">
+            <ul class="listTop clearfix ">
+                <li class="padd-item">
+                    <span class="cityDetial checkboxLabel">全选</span>
+                </li>
+                <li>影院</li>
+                <li>地区</li>
+                <li>上午票房(元)</li>
+                <li>票房排行</li>
+            </ul>
+            <ul class="listBottom clearfix mt20">
+                <li class="padd-item"><span class="cityDetial checkboxLabel">11782</span></li>
+                <li>星美国际影城三里屯店</li>
+                <li>北京-朝阳区</li>
+                <li>6,900.00</li>
+                <li>67</li>
+            </ul>
+            <ul class="listBottom clearfix">
+                <li class="padd-item"><span class="cityDetial checkboxLabel">11782</span></li>
+                <li>星美国际影城三里屯店</li>
+                <li>北京-朝阳区</li>
+                <li>6,900.00</li>
+                <li>67</li>
+            </ul>
+            <ul class="listBottom clearfix">
+                <li class="padd-item"><span class="cityDetial checkboxLabel">11782</span></li>
+                <li>星美国际影城三里屯店</li>
+                <li>北京-朝阳区</li>
+                <li>6,900.00</li>
+                <li>67</li>
+            </ul>
+            <ul class="listBottom clearfix">
+                <li class="padd-item"><span class="cityDetial checkboxLabel">11782</span></li>
+                <li>星美国际影城三里屯店</li>
+                <li>北京-朝阳区</li>
+                <li>6,900.00</li>
+                <li>67</li>
+            </ul>
+            <ul class="listBottom clearfix">
+                <li class="padd-item"><span class="cityDetial checkboxLabel">11782</span></li>
+                <li>星美国际影城三里屯店</li>
+                <li>北京-朝阳区</li>
+                <li>6,900.00</li>
+                <li>67</li>
+            </ul>
+        </div>
+        <div class="loading">
+            <img src="../img/loading.gif" alt="">
+        </div>
+
+    </div>
+</div>
+<!--推送详情页 end-->
+
+<!--票补申请单审批 弹框-->
+<div class="PopWin" style="display: none">
+    <div class="msk"></div>
+    <div class="popCon bigWin fixedWidth">
+        <span class="del"></span>
+        <div class="popTitle">新建票补项目</div>
+        <div class="p20">
+            <div class="inptWrap applyInfo">
+                <div><span class="label">编号：</span>SQ170301001</div>
+                <div><span class="label">票补规则：</span>变心金刚5：最后的骑士 2017-06-01</div>
+                <div><span class="label">申请金额：</span>¥60,000.00</div>
+                <div><span class="label">申请时间：</span>2017.05.31 14:25:37</div>
+            </div>
+            <div class="sumInfo mt20 clearfix">
+                <div class="usefulSum">
+                    <div>
+                        <h5>资金专户可用余额</h5>
+                        <p>10,000,000,000.00元</p>
+                    </div>
+                </div>
+                <div class="suggestSum">
+                    <div class="micro-noml">
+                        <h5>建议申请金额</h5>
+                        <p>20,000.00元</p>
+                    </div>
+                </div>
+            </div>
+            <div class="inptWrap mt20 relative posMask">
+                <div class="usePrice">
+                    <span class="wisdom">小A智慧：</span>
+                    <span class="proposal">建议审批金额</span>
+                    <p class="money">58,000,000.00元</p>
+                    <button class="useTo blue_b">使用</button>
+                </div>
+                <form action="">
+                    <div class="clearfix approval">
+                        <span class="ite cur micro-blo f14">审批通过</span>
+                        <div>
+                            <span class="micro-ml label2 pl20 f14">审批金额：</span>
+                            <input type="text" class="text_s" value="" name=""/>元<br>
+                        </div>
+
+                    </div>
+                    <div class="clearfix">
+                        <span class="ite micro-blo f14">拒绝</span><br>
+                        <span class="label2 pl20 fl f14 micro-ml">拒绝原因：</span>
+                        <textarea name="" class="textarea fl" cols="30" rows="10"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="micro-heig tc">
+                <input type="button" class="blue_b delBtn" value="取消">
+                <input type="button" class="blue_b ml20" value="确定">
+            </div>
+        </div>
+    </div>
+</div>
+<!--票补申请单审批 end-->
+
+<!-- 发票确认 start-->
+<div class="PopWin confirmEject confime-invoice" style="display: none">
+    <div class="msk"></div>
+    <div class="popCon rzqrWH bigWin fixedWidth">
+        <span class="del"></span>
+        <div class="rzqrFont">发票确认</div>
+        <div class="p20">
+            <div style="overflow: hidden;" class="inptWrap applyInfo">
+                <p>申请方：星美国际影城三里屯店</p>
+                <p>时&nbsp;&nbsp;&nbsp;间：2017-05-19 14:35:26</p>
+                <p>凭&nbsp;&nbsp;&nbsp;证：</p>
+                <ul class="invoice mt10">
+                    <li>
+                        <img src="../img/demo/invoice.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="../img/demo/invoice.jpg" alt="">
+                    </li>
+                    <li class="noneMR">
+                        <img src="../img/demo/invoice.jpg" alt="">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mt20 invoice-con">
+                <p>关于发票确认：</p>
+                <p>在发票未确认前，影院无法将已到账的这笔资金转出到其他账户，需要确认发票已收到后，影院才能提走账内的这笔资金。影院发起确认申请后，可以上传一些凭证提供核对（如快递单、发票照片等）。</p>
+
+                <div>
+                    <p class="tc invoice-marLeft">我知道了</p>
+                    <input type="button" class="blue_s rzqrBtn mt10 invoice-fim" value="确认已收到发票">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 发票确认 end-->
+
+</body>
+
+<!-- scripts -->
+<script type="text/javascript" src="../js/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/mod/mod.js"></script>
+<script type="text/javascript" src="../js/mod/newTab.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var newTab = new PlayTab();
+        newTab.init();
+
+        //simulate select
+        $('.simulateSelect').on('click', '.nameWidth', function () {
+            var _this = $(this),
+                selectContent = _this.next('.selectContent'),
+                val = '';
+            selectContent.show();
+            selectContent.on('click', 'li', function () {
+                selectContent.hide();
+                val = $(this).html();
+                _this.val(val);
+            });
+        });
+
+        // 发票确认
+        $('.invoice-confirm').on('click', function () {
+            $('.confime-invoice').show();
+        });
+    });
+</script>
+</html>

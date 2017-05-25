@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>补贴方-首页日历</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="../css/ie7_hack.css"/>
+    <![endif]-->
+</head>
+<body>
+
+<!-------------------- S 项目日历开始 -------------------->
+
+<div class="calendar p20 account-box">
+    <!-- 标题 -->
+    <div class="title">项目日历</div>
+
+    <!-- 切换 -->
+    <div class="calendar-title pageTitle date-content">
+        <a href="javascript:;" class="title pro-title"><span class="f-year"></span>年<span class="f-month"></span>月</a>
+        <div class="arrow">
+            <span class="tit cur f-btn-fhby left">本月</span>
+            <span class="tit f-btn-jian left">下月</span>
+            <span class="tit f-btn-jia left">上月</span>
+        </div>
+    </div>
+
+    <!-- 星期 -->
+    <div class="f-rili-table">
+        <div class="calendar-week f-rili-head clearfix">
+            <div class="item f-rili-th">星期日</div>
+            <div class="item f-rili-th">星期一</div>
+            <div class="item f-rili-th">星期二</div>
+            <div class="item f-rili-th">星期三</div>
+            <div class="item f-rili-th">星期四</div>
+            <div class="item f-rili-th">星期五</div>
+            <div class="item f-rili-th">星期六</div>
+        </div>
+        <div class="calendar-date f-tbody clearfix">
+        </div>
+    </div>
+
+    <!-- 浮层 -->
+    <div class="container">
+        <div class="layer mt10">
+            <a class="hovColor" href="javascript:;">
+                大话西游之大圣娶亲
+                <div class="calendar-today fl p20 inital">
+                    <i class="triangle"></i>
+                    <div class="date-left fl">
+                        <img src="../img/demo/f2.jpg" alt="">
+                    </div>
+                    <div class="date-right fl ml10">
+                        <div class="mask-right-top">
+                            <p class="f14">大话西游之大圣娶亲</p>
+                            <p>
+                                <span>票补总额(元)：15,000,000,000.00</span><br>
+                                <span>可用总额(元)：15,000,000,000.00</span>
+                            </p>
+                        </div>
+                        <div class="mask-right-bottom fl">
+                            <p class="title mt10 fontColor">
+                                2017年05.06 票补计划
+                            </p>
+                            <p class="marTop">
+                                <span>达标规则：排片率12% 上座率51%</span>
+                            </p>
+                            <p class="clearfix blackCol"><span class="fr">时段 全天/20:00-23:00</span></p>
+                            <p class="f14 blackCol">申请单数：<span class="set-color">10095</span></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="hovColor" href="javascript:;">
+                攻壳机动队
+                <div class="calendar-today fl p20">
+                    <i class="triangle"></i>
+                    <div class="date-left fl">
+                        <img src="../img/demo/f2.jpg" alt="">
+                    </div>
+                    <div class="date-right fl ml10">
+                        <div class="mask-right-top">
+                            <p class="f14">攻壳机动队</p>
+                            <p>
+                                <span>票补总额(元)：15,000,000,000.00</span><br>
+                                <span>可用总额(元)：15,000,000,000.00</span>
+                            </p>
+                        </div>
+                        <div class="mask-right-bottom fl">
+                            <p class="title mt10">
+                                2017年05.06 票补计划'</p>
+                            <p class="marTop">
+                                <span>达标规则：排片率12% 上座率51%</span>
+                            </p>
+                            <p class="clearfix blackCol"><span class="fr">时段 全天/20:00-23:00</span></p>
+                            <p class="f14 blackCol">申请单数：<span class="set-color">10095</span></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="hovColor" href="javascript:;">
+                海角有个五金店
+                <div class="calendar-today fl p20">
+                    <i class="triangle"></i>
+                    <div class="date-left fl">
+                        <img src="../img/demo/f2.jpg" alt="">
+                    </div>
+                    <div class="date-right fl ml10">
+                        <div class="mask-right-top">
+                            <p class="f14">海角有个五金店</p>
+                            <p>
+                                <span>票补总额(元)：15,000,000,000.00</span><br>
+                                <span>可用总额(元)：15,000,000,000.00</span>
+                            </p>
+                        </div>
+                        <div class="mask-right-bottom fl">
+                            <p class="title mt10">
+                                2017年05.06 票补计划
+                            </p>
+                            <p class="marTop">
+                                <span>达标规则：排片率12% 上座率51%</span>
+                            </p>
+                            <p class="clearfix blackCol"><span class="fr">时段 全天/20:00-23:00</span></p>
+                            <p class="f14 blackCol">申请单数：<span class="set-color">10095</span></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-------------------- E 项目日历结束 -------------------->
+</body>
+<script src="../js/lib/jquery.1.7.2.min.js"></script>
+<script src="../js/mod/mod.js"></script>
+<script src="../js/mod/newTab.js"></script>
+<script src="../js/mod/calendar.js"></script>
+<script>
+    $(function () {
+        var containerElement = $('.container').html();
+        $('.f-td').eq(5).append(containerElement).css({background: '#F6F7FA'});
+        $('.f-td').eq(9).append(containerElement).css({background: '#F6F7FA'});
+        $('.f-td').eq(9).find('.inital').css({display:'block'});
+        $('.f-td').eq(20).append(containerElement).css({background: '#F6F7FA'});
+        $('.f-td').eq(25).append(containerElement).css({background: '#F6F7FA'});
+
+        // 日历上一月
+        $(".f-btn-jian").on('click', function () {
+            monthReduce();
+        });
+
+        // 日历下一月
+        $(".f-btn-jia").on('click', function () {
+            monthAdd();
+        });
+
+        // 返回本月
+        $(".f-btn-fhby").on('click', function () {
+            showNowDate();
+        });
+
+    });
+</script>
+</html>

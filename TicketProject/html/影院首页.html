@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>影院首页</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+
+<body>
+<div class="p20">
+	<div class="cm_topBlock clearfix">
+		<div class="l">
+			<div class="t clearfix">
+				<!--待处理-->
+				<div class="lr">
+					<div class="waitBlock whiteBg">
+						<h3 class="title">待处理</h3> 
+						<div onClick="window.location=''"><span class="orange">10</span>补贴方票补直推</div> <!--没有数据时直接写0-->
+						<div><span class="orange">25</span>院线票补推送</div>
+					</div>
+				</div>
+				<!--我的信息-->
+				<div class="ll relative whiteBg">
+					<div class="p20">
+						<h3 class="title">我的信息</h3>
+						<div class="myMsg mt20 clearfix">
+							<div class="headImg fl clearfix">
+								<img src="../img/demo/newlogo.png" alt="" />
+								<a href="#" class="qua">资质认证</a>
+							</div>
+							<div class="head-cont fl">
+								<h3 class="f14">CGV星星影城（颐堤港店）</h3>
+								<p class="micro-mt">地址：朝阳区酒仙桥路18号颐堤港4层</p>
+								<p>联系人：章朝阳</p>
+								<p>联系电话：18611740591／15010172431</p>
+							</div>
+						</div>
+					</div>
+					<div class="kopNum"><span>靠谱指数：</span><i class="orange">85</i></div><!--首次进来，默为80-->
+				</div>
+			</div>
+			<!--我的账户-->
+			<div class="myAccount">
+				<div class="p20 whiteBg">
+					<div class="title">我的账户</div>
+					<div class="tableTitle clearfix">
+						<div class="w1 tc">账户概览</div>
+						<div class="w2 tc">近期入账</div>
+					</div>
+					<div class="myAccountData clearfix">
+						<div class="total">
+							<div class="p20">
+								<p>账户余额(元)</p><!--余额为0时显示00.00-->
+								<p class="sum">1,000,000.00</p>
+							</div>
+							<input type="button" value="转出">
+						</div>
+						<div class="list_all"> <!--这三项没有值的时候用‘-’表示-->
+							<div><span class="fr">3,000.00</span>新申请</div> 
+							<div><span class="fr">73,000.00</span>执行中</div>
+							<div><span class="fr">123,000.00</span>拨付中</div>
+						</div>
+						<div class="line_4"><!--这里没有数据时，显示四个‘-’-->
+							<!--<p><span class="fr">8,567.00</span>大话西游之大圣娶亲</p>
+							<p><span class="fr">998,567.00</span>冰雪大作战</p>
+							<p><span class="fr">5,998,567.00</span>速度与激情8</p>
+							<p><span class="fr">567.00</span>嫌疑人X现身</p>-->
+							<p><span class="fr">8,567.00</span>大话西游之大圣娶亲</p>
+							<p><span class="fr">998,567.00</span>冰雪大作战</p>
+							<p><span class="fr">5,998,567.00</span>速度与激情8</p>
+							<p><span class="fr">567.00</span>嫌疑人X现身</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--我的排片-->
+		<div class="r whiteBg">
+			<div class="p20">
+				<h2 class="title">我的排片</h2>
+				<div class="dateTab clearfix">
+					<span class="cur fl">2017.04.16</span>
+					<span class="fr">2017.04.18</span>
+					<span>2017.04.17</span>
+				</div>
+				<div class="tabList mt20">
+					<div class="arrangeList">
+						<div><em>17%</em>大话西游之大圣娶亲</div>
+						<div><em>16%</em>冰雪大作战</div>
+						<div><em>15%</em>速度与激情8</div>
+						<div><em>14%</em>嫌疑人X现身</div>
+						<div><em>13%</em>大话西游之大圣娶亲</div>
+						<div><em>17%</em>傲娇与偏见</div>
+						<div><em>16%</em>蓝精灵：寻找神秘村</div>
+						<div><em>15%</em>变形金刚5：最后的骑士</div>
+						<div><em>14%</em>加勒比海盗5：死无对证</div>
+					</div>
+					<div class="none">
+						<div class="noData n0">
+							<p>暂无排片信息</p>
+						</div>
+					</div>
+					<div class="none">
+						<div class="noData n0">
+							<p>暂无排片信息</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cm_belowBlock mt20">
+		<div class="title">我的票补</div>
+		<div class="tableTitle clearfix">
+			<div class="w3"><span class="col0">影片</span></div>
+			<div class="w4"><span>补贴方</span></div>
+			<div class="w5"><span>使用日期</span></div>
+			<div class="w6"><span class="tr">申请金额(元)</span></div>
+			<div class="w7 fr"><span>当前状态</span></div>
+		</div>
+		<div class="tableList">
+			<dl class="clearfix">
+				<dd class="w3"><span class="col0">速度与激情8</span></dd>
+				<dd class="w4">华谊兄弟</dd>
+				<dd class="w5">2017.04.17</dd>
+				<dd class="w6"><span class="tr">6,900.00</span></dd>
+				<dt class="w7 fr">待审批</dt>
+			</dl>
+			<dl class="clearfix">
+				<dd class="w3"><span class="col0">大话西游之大圣娶亲</span></dd>
+				<dd class="w4">太合娱乐</dd>
+				<dd class="w5">2017.04.17</dd>
+				<dd class="w6"><span class="tr">45,900.00</span></dd>
+				<dt class="w7 fr">执行中</dt>
+			</dl>
+			<dl class="clearfix">
+				<dd class="w3"><span class="col0">傲娇与偏见</span></dd>
+				<dd class="w4">微影资本</dd>
+				<dd class="w5">2017.04.17</dd>
+				<dd class="w6"><span class="tr">656,900.00</span></dd>
+				<dt class="w7 fr">已拒绝</dt>
+			</dl>
+			<dl class="clearfix">
+				<dd class="w3"><span class="col0">蓝精灵：寻找神秘村</span></dd>
+				<dd class="w4">上海银行</dd>
+				<dd class="w5">2017.04.17</dd>
+				<dd class="w6"><span class="tr">5,900.00</span></dd>
+				<dt class="w7 fr">已完成</dt>
+			</dl>
+			<dl class="clearfix">
+				<dd class="w3"><span class="col0">变形金刚5：最后的骑士</span></dd>
+				<dd class="w4">乐视发行</dd>
+				<dd class="w5">2017.04.17</dd>
+				<dd class="w6"><span class="tr">56,900.00</span></dd>
+				<dt class="w7 fr">待审批</dt>
+			</dl>
+			<dl class="clearfix">
+				<dd class="w3"><span class="col0">加勒比海盗5：死无对证</span></dd>
+				<dd class="w4">万达电影</dd>
+				<dd class="w5">2017.04.17</dd>
+				<dd class="w6"><span class="tr">234,900.00</span></dd>
+				<dt class="w7 fr">执行中</dt>
+			</dl>
+			<div class="moreData"><a href="#">查看更多</a></div>
+		</div>
+		<!--空数据提示信息-->
+		<!--<div class="noData n1">  
+			<p>非常抱歉，暂时没有相关数据</p>
+		</div>-->
+	</div>
+</div>
+</body>
+	<script type="text/javascript" src="../js/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/mod/mod.js"></script>
+</html>

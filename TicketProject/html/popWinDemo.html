@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>公用弹框小插件</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+
+<body>
+<div class="p20">
+	<input type="button" class="blue_b" id="btn1" value="弹出二次确认框">
+	<input type="button" class="blue_b" id="btn2" value="弹出提示框">
+	<input type="button" class="blue_b" id="btn3" value="弹出一个按钮的提示框">
+</div>
+	<script type="text/javascript" src="../js/lib/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="../js/mod/popWin.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('#btn1').on('click',function(){
+			PopWin({
+				title: '票补项目',
+				content: '您确定要删除项目记录吗？',
+				btnCount: 2,
+				btn1: '取消',
+				btn2: '确定',
+				btn1Callback: function(){
+					alert("您点击了取消按钮00");
+				},
+				btn2Callback: function(){
+					alert("您点击了确定按钮00");
+				}
+			});
+		});
+		$('#btn2').on('click',function(){
+			PopWin({
+				title: '票补项目',
+				keyText: '姓名',
+				content: '不能为空!!!',
+				btnCount: 2,
+				btn1: '取消',
+				btn2: '确定',
+				btn1Callback: function(){
+					alert("您点击了取消按钮11");
+				},
+				btn2Callback: function(){
+					alert("您点击了确定按钮11");
+				}
+			});
+		});
+		$('#btn3').on('click',function(){
+			PopWin({
+				title: '票补项目',
+				content: '电影《一条狗的使命》票补申请成功！',
+				btnCount: 1,
+				btn2: '确定',
+				btn2Callback: function(){
+					alert("您点击了确定按钮222");
+				}
+			});
+		});
+	});
+	</script>
+</body>
+</html>

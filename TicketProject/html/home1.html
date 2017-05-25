@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--<meta http-equiv="x-ua-compatible" content="IE=7;" />-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+<title>补贴方首页</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+</head>
+
+<body>
+<div class="header clearfix">
+	<div class="users">
+		<span class="login-man"></span>
+		<span class="login">please user sign in</span>
+		<a class="sign-out" href="javascirpt:;">退出</a>
+		<span class="login-icon">
+            <img src="../img/login.png" alt="">
+        </span>
+	</div>
+	<div class="logo"></div>
+	<div class="companyTitle">太合票补B2B平台</div>
+</div>
+<div class="aside">
+	<div class="slideBar"></div>
+	<ul class="mainNav">
+		<li class="cur"><a href="补贴方首页.html" target="mainPage"><span class="ni_0"></span>首页</a></li>
+		<li><a href="补贴方-项目列表.html" target="mainPage"><span class="ni_5"></span>我的项目</a></li>
+		<li><a href="补贴方-申请单列表.html" target="mainPage"><span class="ni_6"></span>申请单</a></li>
+		<li><a href="补贴方-报表中心.html" target="mainPage"><span class="ni_4"></span>报表中心</a></li>
+	</ul>
+</div>
+<div class="wrap" data-role="main">
+	<iframe src="补贴方首页.html" name="mainPage" id="iframeWrap" frameborder="0" scrolling="auto"></iframe>
+</div>
+<script type="text/javascript" src="../js/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/mod/mod.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('.mainNav').on('click', 'li', function(){
+		$(this).addClass('cur').siblings().removeClass('cur');
+	});
+    // 登录登出
+    $('.users').on('mouseover', function () {
+        $('.sign-out').show();
+    });
+
+    $('.users').on('mouseout', function () {
+        $('.sign-out').hide();
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>tabs</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="../css/main.css" />
+	<style>
+		.tabContent{padding:20px;background: #fff;}
+	</style>
+</head>
+
+<body>
+<div class="titWrap">
+	<div class="pageTitle clearfix">
+		<div class="lBtn"></div>
+		<div class="tabWrap cur">
+			<div>
+				<span class="tit cur">票补申请单</span>
+<!--
+				<span class="tit">票补方直推</span>
+				<span class="tit">院线推送</span>
+-->
+			</div>
+		</div>
+		<div class="rBtn"></div>
+	</div>
+</div>
+<div class="p20">
+	<div class="whiteBg p20">
+		<input type="button" value="添加标签" id="addTab" class="blue_s" />
+		<input type="button" value="打开标签" data-id="abcd1" id="openTab" class="blue_s ml10">
+	</div>
+</div>
+<div class="tabContent mt20">
+	票补申请单
+</div>
+<!--
+<div class="tabContent none">
+	票补方直推
+</div>
+<div class="tabContent none">
+	院线推送
+</div>
+-->
+<script type="text/javascript" src="../js/lib/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../js/mod/mod.js"></script>
+<script type="text/javascript" src="../js/mod/newTab.js"></script>
+<script type="text/javascript">
+$(function(){
+	//实例化对象
+	var newTab = new PlayTab(), n = 0;
+	newTab.init();
+	$('#addTab').on('click',function(){
+		newTab.addTab({
+			name: '新建标签abcd' + n,
+			id: 'abcd' + n, //如果此id的tab签已存在，就打开已存在的，否则新建
+			callback: function(){
+				var html = '<div class="tabContent">添加一个标签内容工aaaaaaaaaaaaaaaaaaaaa' + n + '</div>', len = 0;
+				$('body').append(html);
+				len = $('.tabContent').length;
+				$('.tabContent').eq(len - 1).show().siblings('.tabContent').hide();
+			}
+		});
+		n++;
+	});
+	//打开特定的tab签
+	$('#openTab').on('click', function(){
+		var id = $(this).data('id');
+		newTab.addTab({
+			name: '新建标签abc',
+			id: 'abcd16',  //如果此id的tab签已存在，就打开已存在的，否则新建
+			callback: function(){
+				var html = '<div class="tabContent">添加一个标签内容工aaaaaaaaaaaaabbbbbbbbbcccccccc00000000000000' + n + '</div>', len = 0;
+				$('body').append(html);
+				len = $('.tabContent').length;
+				$('.tabContent').eq(len - 1).show().siblings('.tabContent').hide();
+			}
+		});
+	});	
+});
+</script>
+</body>
+</html>
